@@ -1,0 +1,157 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "homepage-functionality;1.verify-login-with-invalid-data:empty-username",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "1.Verify Login with invalid data:empty username",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 285618361
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigates to page",
+            "match": {
+              "location": "src/test/steps/dashboardSteps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3313990480
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User inputs data with \"\" and \"Heath93\"",
+            "match": {
+              "location": "src/test/steps/dashboardSteps.ts:10"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5005608661,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/home/nttheu/Demoprojetcs/Admidio/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "\"Please fill out this field\" message will be displayed",
+            "match": {
+              "location": "src/test/steps/dashboardSteps.ts:14"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 188523675
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@high",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "homepage-functionality;1.verify-login-with-invalid-data:empty-password",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "1.Verify Login with invalid data:empty password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 134843959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigates to page",
+            "match": {
+              "location": "src/test/steps/dashboardSteps.ts:6"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5003476052,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/home/nttheu/Demoprojetcs/Admidio/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User inputs data with \"Heath93\" and \"\"",
+            "match": {
+              "location": "src/test/steps/dashboardSteps.ts:10"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "\"Please fill out this field\" message will be displayed",
+            "match": {
+              "location": "src/test/steps/dashboardSteps.ts:14"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 679639807
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@high",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "homepage-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Homepage Functionality",
+    "tags": [],
+    "uri": "src/test/features/account.feature"
+  }
+]

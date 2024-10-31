@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_01-:-user-create-new-account-:-successfully",
+        "id": "homepage-functionality;tc_01-:-user-create-new-account-successfully",
         "keyword": "Scenario",
-        "line": 14,
-        "name": "TC_01 : User create new account : successfully",
+        "line": 7,
+        "name": "TC_01 : User create new account successfully",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 249704834
+              "duration": 301938559
             }
           },
           {
@@ -26,9 +26,8 @@
               "location": "src/test/steps/dashboardSteps.ts:6"
             },
             "result": {
-              "status": "failed",
-              "duration": 5008760950,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/home/nttheu/Demoprojetcs/Admidio/Admidio/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"
+              "status": "passed",
+              "duration": 9775396074
             }
           },
           {
@@ -40,18 +39,21 @@
               "location": "src/test/steps/dashboardSteps.ts:11"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 965903854
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "User inputs data with \"Admin\", \"Admint@1234\", \"Admint@1234\", \"Surname\", \"First name\" and \"E-mail\"",
+            "name": "User inputs all valid data",
+            "match": {
+              "location": "src/test/steps/registerSteps.ts:8"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 5018740501
             }
           },
           {
@@ -60,11 +62,11 @@
             "line": 10,
             "name": "New account has been created successfully",
             "match": {
-              "location": "src/test/steps/registerSteps.ts:12"
+              "location": "src/test/steps/registerSteps.ts:13"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 19435698
             }
           },
           {
@@ -72,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2365751864
+              "duration": 68594354
             }
           }
         ],

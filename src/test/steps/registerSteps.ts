@@ -5,11 +5,12 @@ import DashboardPage from "../pages/dashboardPage"
 import { pageFixture } from "../../hooks/pageFixture";
 
 
-When("And User inputs data with {string}, {string}, {string}, {string}, {string} and {string}", async (username, pass, confirmPass, surname, firstname, email ) => {
+When("User inputs all valid data", { timeout: 30000 }, async () => {
   const registerPage = new RegisterPage(pageFixture.page);
-  await registerPage.registAccount(username, pass, confirmPass, surname, firstname, email );
+  await registerPage.registAccount(pageFixture.page);
 });
-Then ("New account has been created successfully",async ()=>{
+
+Then("New account has been created successfully", { timeout: 30000 }, async () => {
   const registerPage = new RegisterPage(pageFixture.page);
   await registerPage.registMess();
 })

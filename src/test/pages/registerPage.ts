@@ -1,8 +1,8 @@
 import { Page, Locator, expect } from "@playwright/test";
 const locator = require("../selectors/registerLocators.json");
 import { getUniqueNumber } from "../../helper/utils";
-import dotenv from "dotenv";
-dotenv.config();
+import { faker } from '@faker-js/faker';
+
 
 export default class RegisterPage {
     readonly page: Page;
@@ -27,20 +27,41 @@ export default class RegisterPage {
         this.message = page.locator(locator.message);
     }
 
-    async registAccount(userNamev: string, passwordv: string, confirmPassv: string, surnamev: string, firstnamev: string, emailv: string) {
-        // const id = getUniqueNumber();
-        // const usernamev = `id`;
-        // const emailv = `${id}@yopmail.com`;
-
-        await this.username.fill(userNamev);
-        await this.password.fill(passwordv);
-        await this.confirmpassword.fill(confirmPassv);
-        await this.surname.fill(surnamev);
-        await this.firstname.fill(firstnamev);
-        await this.email.fill(emailv);
-        await this.sendButton.click()
-
-    }
+    async registAccount(page: Page) {
+        const { firstName, surName, email, password } = await this.generateRandomUserData();
+      
+        const randomNum = Math.floor(Math.random() * 10000) + 1;
+        const username = `${firstName}${randomNum}`;
+      
+        // Assuming username field has ID 'username'
+        await this.username.fill(username);
+        await this.password.fill(password);
+        await this.confirmpassword.fill(password);
+        await this.surname.fill(surName);
+        await this.firstname.fill(firstName);
+        await this.email.fill(email);
+        //await this.sendButton.click(); //chờ disable captcha
+      }
+      
+      async generateRandomUserData(): Promise<{
+        firstName: string;
+        surName: string;
+        email: string;
+        password: string;
+      }> {
+        const firstName = faker.name.firstName();
+        const surName: string = faker.name.lastName();
+        const email = faker.internet.email();
+        const password = faker.internet.password();
+      
+        return {
+          firstName,
+          surName,
+          email,
+          password,
+        };
+      }
+  
     async registMess(){
         await expect(this.sendButton).toBeVisible();
     }

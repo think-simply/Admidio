@@ -4,11 +4,12 @@ Feature: Homepage Functionality
     Given User navigates to page
 
   @high
-  Scenario: TC_01 : User create new account : <Description>
+  Scenario: TC_01 : User create new account successfully
     When User goes to Register page
-    And User inputs data with "<UserName>", "<Password>", "<Confirm password>", "<Surname>", "<First name>" and "<E-mail>"
+    And User inputs all valid data
     Then New account has been created successfully
 
-    Examples:
-      | Description  | UserName | Password    | Confirm password | Surname | First name | E-mail |
-      | successfully | Admin    | Admint@1234 | Admint@1234      | Surname | First name | E-mail |
+  # Scenario: TC_02 : User create new account with existing data
+  #   When User goes to Register page
+  #   And User inputs all invalid data
+  #   Then New account has been created successfully

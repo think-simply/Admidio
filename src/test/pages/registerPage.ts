@@ -63,6 +63,6 @@ export default class RegisterPage {
       }
   
     async registMess(){
-        await expect(this.sendButton).toBeVisible();
+        await expect(this.message).toBeVisible();
     }
 }

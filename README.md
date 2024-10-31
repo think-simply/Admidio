@@ -3,8 +3,7 @@
 This is a sample automation framework using Playwright,Cucumber and Typescript.(Following structure with POM)
 
 1. Clone the repository to your local machine:
-   git clone --branch Admidio https://source.cmcglobal.com.vn/delivery-euro-unit/de4/noibo/internal.git
-
+   git clone 
 2. Open the project folder in Visual Studio Code:
    cd internal
 

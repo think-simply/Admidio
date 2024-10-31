@@ -4,7 +4,7 @@ import DashboardPage from "../pages/dashboardPage";
 import { pageFixture } from "../../hooks/pageFixture"; 
 
 Given("User navigates to page",{ timeout: 20000 }, async () => {
-    const dashboardPage = new DashboardPage(pageFixture.page); // Use pageFixture.page
+    const dashboardPage = new DashboardPage(pageFixture.page); // Use pageFixture.page here
     await dashboardPage.visit();
     
   });

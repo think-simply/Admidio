@@ -4,12 +4,11 @@ Feature: Homepage Functionality
     Given User navigates to page
 
   @high
-  Scenario: 1.Verify Login with invalid data:<Description>
-    When User inputs data with "<UserName>" and "<Password>"
-    Then "<Error>" message will be displayed
+  Scenario: TC_01 : User create new account : <Description>
+    When User goes to Register page
+    And User inputs data with "<UserName>", "<Password>", "<Confirm password>", "<Surname>", "<First name>" and "<E-mail>"
+    Then New account has been created successfully
 
     Examples:
-      | Description                           | UserName | Password | Error                                                                     |
-    #   | invalid username and invalid password | Heath93  | Heath93  | Epic sadface: Username and password do not match any user in this service |
-      | empty username                        |          | Heath93  | Please fill out this field                                      |
-      | empty password                        | Heath93  |          | Please fill out this field                                        |
+      | Description  | UserName | Password    | Confirm password | Surname | First name | E-mail |
+      | successfully | Admin    | Admint@1234 | Admint@1234      | Surname | First name | E-mail |

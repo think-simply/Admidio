@@ -1,9 +1,15 @@
 // loginSteps.ts
 import { Given, When, Then } from "@cucumber/cucumber";
 import RegisterPage from "../pages/registerPage";
-import { pageFixture } from "../../hooks/pageFixture"; 
+import DashboardPage from "../pages/dashboardPage"
+import { pageFixture } from "../../hooks/pageFixture";
 
-Given("User navigates to register page", async () => {
-    const loginPage = new RegisterPage(pageFixture.page); // Use pageFixture.page
-    await loginPage.visit();
-  });
+
+When("And User inputs data with {string}, {string}, {string}, {string}, {string} and {string}", async (username, pass, confirmPass, surname, firstname, email ) => {
+  const registerPage = new RegisterPage(pageFixture.page);
+  await registerPage.registAccount(username, pass, confirmPass, surname, firstname, email );
+});
+Then ("New account has been created successfully",async ()=>{
+  const registerPage = new RegisterPage(pageFixture.page);
+  await registerPage.registMess();
+})

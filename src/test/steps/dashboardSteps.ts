@@ -4,14 +4,13 @@ import DashboardPage from "../pages/dashboardPage";
 import { pageFixture } from "../../hooks/pageFixture"; 
 
 Given("User navigates to page", async () => {
-    const loginPage = new DashboardPage(pageFixture.page); // Use pageFixture.page
-    await loginPage.visit();
+    const dashboardPage = new DashboardPage(pageFixture.page); // Use pageFixture.page
+    await dashboardPage.visit();
+    
   });
-  When("User inputs data with {string} and {string}", async (name, pass) => {
-    const loginPage = new DashboardPage(pageFixture.page);
-    await loginPage.login(name, pass);
+  When("User goes to Register page", async () => {
+    const dashboardPage = new DashboardPage(pageFixture.page);
+    await dashboardPage.gotoRegister();
   });
-  Then("{string} message will be displayed", async (errorMessage) => {
-    const loginPage = new DashboardPage(pageFixture.page);
-    await loginPage.validateErrorMessage(errorMessage);
-  });
+  
+ 

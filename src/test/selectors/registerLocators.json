@@ -4,6 +4,9 @@
     "confirmpassword": "#password_confirm",
     "surname": "#usf-1",
     "firstname":"#usf-2",
-    "email":"#usf-11"
+    "email":"#usf-11",
+    "sendButton": "#btn_save",
+
+    "message": "//p[@class='lead'][contains(text(), 'Your data has been saved.')]"
 
 }

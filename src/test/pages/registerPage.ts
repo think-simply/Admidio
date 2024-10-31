@@ -40,7 +40,7 @@ export default class RegisterPage {
         await this.surname.fill(surName);
         await this.firstname.fill(firstName);
         await this.email.fill(email);
-        //await this.sendButton.click(); //chờ disable captcha
+        await this.sendButton.click(); 
       }
       
       async generateRandomUserData(): Promise<{

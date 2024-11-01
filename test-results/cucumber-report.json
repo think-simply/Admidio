@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_01-:-user-create-new-account-successfully",
+        "id": "homepage-functionality;tc_03:-reset-password",
         "keyword": "Scenario",
-        "line": 7,
-        "name": "TC_01 : User create new account successfully",
+        "line": 27,
+        "name": "TC_03: Reset Password",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 314415066
+              "duration": 312300835
             }
           },
           {
@@ -27,46 +27,46 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7856131155
+              "duration": 3210080845
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 8,
-            "name": "User goes to Register page",
+            "line": 21,
+            "name": "User clicks on the Password forgotten link",
             "match": {
-              "location": "src/test/steps/dashboardSteps.ts:11"
+              "location": "src/test/steps/dashboardSteps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1021304364
+              "duration": 8434749949
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 9,
-            "name": "User inputs all valid data",
+            "line": 22,
+            "name": "User enters \"theu@yopmail.com\"",
             "match": {
-              "location": "src/test/steps/registerSteps.ts:8"
+              "location": "src/test/steps/forgotPassPage.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 3811624979
+              "duration": 1907832817
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 10,
-            "name": "New account has been created successfully",
+            "line": 23,
+            "name": "User should see a success message",
             "match": {
-              "location": "src/test/steps/registerSteps.ts:13"
+              "location": "src/test/steps/forgotPassPage.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 67752942
+              "duration": 63050153
             }
           },
           {
@@ -74,14 +74,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 101176215
+              "duration": 71083978
             }
           }
         ],
         "tags": [
           {
             "name": "@high",
-            "line": 6
+            "line": 19
           }
         ],
         "type": "scenario"

@@ -7,6 +7,8 @@
     "email":"#usf-11",
     "sendButton": "#btn_save",
 
-    "message": "//p[@class='lead'][contains(text(), 'Your data has been saved.')]"
+    "message": "//p[@class='lead'][contains(text(), 'Your data has been saved.')]",
+    "messExistUsername": "//p[@class='lead'][contains(text(), 'Selected username already exists.')]"
+
 
 }

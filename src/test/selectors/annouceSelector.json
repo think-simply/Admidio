@@ -1,0 +1,8 @@
+{
+    "addEntry": "#menu_item_announcement_add",
+    "title": "#ann_headline",
+    "category": "#ann_cat_id",
+    "text": "//body[@contenteditable='true']",
+    "saveButton": "#btn_save",
+    "newAnnounce": "(//i[@class='fas fa-newspaper'])[1]"
+}

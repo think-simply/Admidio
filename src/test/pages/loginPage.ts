@@ -1,29 +1,16 @@
 import { Page, Locator, expect } from "@playwright/test";
-const locator = require("../selectors/forgotpassSelector.json");
+const locator = require("../selectors/loginSelector.json");
 
-export default class ForgotPassPage {
+export default class LoginPage {
     readonly page: Page;
-    readonly usernameOemail: Locator;
-    readonly SendButton : Locator;
-    readonly messForgot : Locator;
-    
-
+    readonly IncorrectAccount : Locator;
 
     constructor(page: Page) {
         this.page = page;
-        this.usernameOemail = page.locator(locator.usernameOemail);
-        this.SendButton = page.locator(locator.SendButton);
-        this.messForgot = page.locator(locator.messForgot);
+        this.IncorrectAccount = page.locator(locator.IncorrectAccount);
     }
-
-    async forgotPass(email:string) {
-        await this.usernameOemail.fill(email);
-        await this.SendButton.click()
-
-    }
-    async forgotPassMess() {
-        await expect(this.messForgot).toBeVisible();
-
-    }
+    async ErrorMessage() {
+        await expect(this.IncorrectAccount).toBeVisible({ timeout: 5000 });
+      }
     
 }

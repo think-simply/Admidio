@@ -7,22 +7,26 @@ export default class DashboardPage {
     readonly page: Page;
     readonly username: Locator;
     readonly password: Locator;
-    readonly loginButton: Locator;
+    readonly signinButton: Locator;
     readonly RegistrationLink: Locator;
-    readonly ForgotPassLink : Locator;
+    readonly ForgotPassLink: Locator;
+    readonly loginSuccess: Locator;
+    readonly announceMenu: Locator;
 
     constructor(page: Page) {
         this.page = page;
         this.username = page.locator(locator.username);
         this.password = page.locator(locator.password);
-        this.loginButton = page.locator(locator.loginButton);
+        this.signinButton = page.locator(locator.signinButton);
         this.RegistrationLink = page.locator(locator.RegistrationLink);
         this.ForgotPassLink = page.locator(locator.ForgotPassLink);
-        
+        this.loginSuccess = page.locator(locator.loginSuccess);
+        this.announceMenu = page.locator(locator.announceMenu);
+
+
     }
     async visit() {
-        // await this.page.setDefaultTimeout(30000);
-           await this.page.goto(`${process.env.WEB_URL}`); 
+        await this.page.goto(`${process.env.WEB_URL}`);
 
     }
     async gotoRegister() {
@@ -31,12 +35,16 @@ export default class DashboardPage {
     async gotoForgotPass() {
         await this.ForgotPassLink.click();
     }
-    // async login(username: string, password: string) {
-    //     await this.username.fill(username);
-    //     await this.password.fill(password);
-    //     await this.loginButton.click();
-    // }
-    // async validateErrorMessage(message: string) {
-    //     await expect(this.page.getByText(message)).toBeVisible({ timeout: 5000 });
-    //   }
+    async login(username: string, password: string) {
+        await this.username.fill(username);
+        await this.password.fill(password);
+        await this.signinButton.click();
+    }
+    async MessLogin() {
+        await expect(this.loginSuccess).toBeVisible();
+    }
+    async clickonAnnouce() {
+        await this.announceMenu.click();
+    }
+
 }

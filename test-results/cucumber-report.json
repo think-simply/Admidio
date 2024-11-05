@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_03:-reset-password",
+        "id": "homepage-functionality;tc_08:-add-a-new-announcement",
         "keyword": "Scenario",
-        "line": 27,
-        "name": "TC_03: Reset Password",
+        "line": 50,
+        "name": "TC_08: Add a new announcement",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 312300835
+              "duration": 303731303
             }
           },
           {
@@ -27,46 +27,60 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3210080845
+              "duration": 11009560117
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 21,
-            "name": "User clicks on the Password forgotten link",
+            "line": 43,
+            "name": "User login with a valid \"Admin\" or \"Admin@123\"",
             "match": {
-              "location": "src/test/steps/dashboardSteps.ts:15"
+              "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 8434749949
+              "duration": 1439737817
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "User click on Annoucements on left menu",
+            "match": {
+              "location": "src/test/steps/dashboardSteps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 711218181
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 22,
-            "name": "User enters \"theu@yopmail.com\"",
+            "line": 45,
+            "name": "User add a new annoucement title \"title1\"",
             "match": {
-              "location": "src/test/steps/forgotPassPage.ts:7"
+              "location": "src/test/steps/announceStep.ts:7"
             },
             "result": {
-              "status": "passed",
-              "duration": 1907832817
+              "status": "failed",
+              "duration": 1965846,
+              "error_message": "TypeError: Cannot read properties of null (reading 'locator')\n    at new AnnoucePage (/home/nttheu/Demoprojetcs/Admidio/Admidio/src/test/pages/announcePage.ts:19:27)\n    at World.<anonymous> (/home/nttheu/Demoprojetcs/Admidio/Admidio/src/test/steps/announceStep.ts:8:23)"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 23,
-            "name": "User should see a success message",
+            "line": 46,
+            "name": "New annoucement with title \"title1\" has been created successfully",
             "match": {
-              "location": "src/test/steps/forgotPassPage.ts:11"
+              "location": "src/test/steps/announceStep.ts:11"
             },
             "result": {
-              "status": "passed",
-              "duration": 63050153
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -74,14 +88,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 71083978
+              "duration": 287159999
             }
           }
         ],
         "tags": [
           {
             "name": "@high",
-            "line": 19
+            "line": 41
           }
         ],
         "type": "scenario"

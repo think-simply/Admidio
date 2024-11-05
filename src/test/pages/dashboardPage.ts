@@ -46,5 +46,6 @@ export default class DashboardPage {
     async clickonAnnouce() {
         await this.announceMenu.click();
     }
+    
 
 }

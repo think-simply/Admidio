@@ -14,7 +14,10 @@
     "EditCate": "#menu_item_announcement_categories",
     "createCate": "#menu_item_categories_add",
     "firstName": "#cat_name",
-    "categoryList": "//th[normalize-space()='Title']"
+    "categoryList": "//th[normalize-space()='Title']",
+    "editCaButton":"(//i[contains(@data-original-title,'Edit')])[1]",
+    "firstElement": "(//td[contains(@style,'text-align: left;')])[1]//a"
+
 
 
 }

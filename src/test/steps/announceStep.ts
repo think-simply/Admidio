@@ -46,3 +46,12 @@ Then("The new category has been created successfully", { timeout: 30000 }, async
   const annoucePage = new AnnoucePage(pageFixture.page);
   await annoucePage.createCategorylist();
 });
+
+When("User edit a category", { timeout: 30000 }, async () => {
+  const annoucePage = new AnnoucePage(pageFixture.page);
+  await annoucePage.editCate();
+});
+Then("The category has been updated successfully", { timeout: 30000 }, async () => {
+  const annoucePage = new AnnoucePage(pageFixture.page);
+  await annoucePage.afterUpdateCate();
+});

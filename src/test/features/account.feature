@@ -76,11 +76,21 @@ Feature: Homepage Functionality
   #     | username | password  | 
   #     | Admin    | Admin@123 | 
 
-  Scenario: TC_12: Add a new category
+  # Scenario: TC_12: Add a new category
+  #   When User login with a valid "<username>" or "<password>"
+  #   When User click on Annoucements on left menu
+  #   And User create new category
+  #   Then The new category has been created successfully
+
+  #   Examples:
+  #     | username | password  | 
+  #     | Admin    | Admin@123 | 
+
+  Scenario: TC_13: Edit a new category
     When User login with a valid "<username>" or "<password>"
     When User click on Annoucements on left menu
-    And User create new category
-    Then The new category has been created successfully
+    And User edit a category
+    Then The category has been updated successfully
 
     Examples:
       | username | password  | 

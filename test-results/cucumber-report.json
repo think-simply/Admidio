@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_12:-add-a-new-category",
+        "id": "homepage-functionality;tc_13:-edit-a-new-category",
         "keyword": "Scenario",
-        "line": 87,
-        "name": "TC_12: Add a new category",
+        "line": 97,
+        "name": "TC_13: Edit a new category",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 414659496
+              "duration": 317039280
             }
           },
           {
@@ -27,59 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8893736919
+              "duration": 2564671333
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 80,
+            "line": 90,
             "name": "User login with a valid \"Admin\" or \"Admin@123\"",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 1301792973
+              "duration": 9360624600
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 81,
+            "line": 91,
             "name": "User click on Annoucements on left menu",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 704881200
+              "duration": 1341364461
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 82,
-            "name": "User create new category",
+            "line": 92,
+            "name": "User edit a category",
             "match": {
-              "location": "src/test/steps/announceStep.ts:41"
+              "location": "src/test/steps/announceStep.ts:50"
             },
             "result": {
               "status": "passed",
-              "duration": 4955822955
+              "duration": 3129456243
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 83,
-            "name": "The new category has been created successfully",
+            "line": 93,
+            "name": "The category has been updated successfully",
             "match": {
-              "location": "src/test/steps/announceStep.ts:45"
+              "location": "src/test/steps/announceStep.ts:54"
             },
             "result": {
               "status": "passed",
-              "duration": 61670223
+              "duration": 58983464
             }
           },
           {
@@ -87,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 59720438
+              "duration": 47104706
             }
           }
         ],

@@ -22,7 +22,8 @@ export default class AnnoucePage {
     readonly firstName: Locator;
     readonly categoryList: Locator;
     readonly editCaButton: Locator;
-    readonly firstElement : Locator;
+    readonly firstElement: Locator;
+    readonly deleteCaButton : Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -43,8 +44,9 @@ export default class AnnoucePage {
         this.categoryList = page.locator(locator.categoryList);
         this.editCaButton = page.locator(locator.editCaButton);
         this.firstElement = page.locator(locator.firstElement);
+        this.deleteCaButton = page.locator(locator.deleteCaButton);
     }
-    
+
     async addAnnouce(title: string, text: string) {
         await this.addEntry.click();
         await this.page.waitForSelector(locator.titlebox, { timeout: 10000 });
@@ -117,6 +119,23 @@ export default class AnnoucePage {
         const id = getUniqueNumber();
         const updatedCate = await this.firstElement.innerText();
         expect(updatedCate).toBe(`group3_${id}`);
-    
+
+    }
+
+    async deleteCate() {
+        await this.EditCate.click();
+        await this.deleteCaButton.click();
+        await this.confirmYes.click();
+
+    }
+
+    async deleteCateMess() {
+        try {
+            const response = await axios.get('https://buianthai.infinityfreeapp.com/adm_program/modules/categories/categories_function.php?');
+            expect(response.status).toBe(200);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+
     }
 }

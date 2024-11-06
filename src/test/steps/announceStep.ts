@@ -55,3 +55,13 @@ Then("The category has been updated successfully", { timeout: 30000 }, async () 
   const annoucePage = new AnnoucePage(pageFixture.page);
   await annoucePage.afterUpdateCate();
 });
+
+When("User delete a category", { timeout: 30000 }, async () => {
+  const annoucePage = new AnnoucePage(pageFixture.page);
+  await annoucePage.deleteCate();
+});
+Then("The category has been deleted successfully", { timeout: 30000 }, async () => {
+  const annoucePage = new AnnoucePage(pageFixture.page);
+  await annoucePage.deleteCateMess();
+});
+

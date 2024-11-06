@@ -29,3 +29,11 @@ Then("The annoucement has been updated with new title {string}", { timeout: 3000
   await annoucePage.newAnnouce(title);
 });
 
+When("User deletes the first announcement", { timeout: 30000 }, async () => {
+  const annoucePage = new AnnoucePage(pageFixture.page);
+  await annoucePage.deleteAnnouce();
+});
+Then("The annoucement has been deleted successfully", { timeout: 30000 }, async () => {
+  const annoucePage = new AnnoucePage(pageFixture.page);
+  await annoucePage.deleteAnnouceMess();
+});

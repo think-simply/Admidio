@@ -1,6 +1,6 @@
 import { Page, Locator, expect } from "@playwright/test";
 const locator = require("../selectors/annouceSelector.json");
-
+const axios = require('axios');
 export default class AnnoucePage {
     readonly page: Page;
     readonly addEntry: Locator;
@@ -9,9 +9,11 @@ export default class AnnoucePage {
     readonly iFrametextbox: Locator;
     readonly saveButton: Locator;
     readonly newAnnounce: Locator;
-    readonly actionIcon : Locator;
-    readonly optionCopy : Locator;
-    readonly optionUpdate : Locator;
+    readonly actionIcon: Locator;
+    readonly optionCopy: Locator;
+    readonly optionUpdate: Locator;
+    readonly optionDelete: Locator;
+    readonly confirmYes: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -23,7 +25,9 @@ export default class AnnoucePage {
         this.newAnnounce = page.locator(locator.newAnnounce);
         this.actionIcon = page.locator(locator.actionIcon);
         this.optionCopy = page.locator(locator.optionCopy);
-        this.optionUpdate = page.locator(locator.optionUpdate)
+        this.optionUpdate = page.locator(locator.optionUpdate);
+        this.optionDelete = page.locator(locator.optionDelete);
+        this.confirmYes = page.locator(locator.confirmYes)
     }
     async addAnnouce(title: string, text: string) {
         await this.addEntry.click();
@@ -39,7 +43,7 @@ export default class AnnoucePage {
         const newPostTitle = await this.newAnnounce.innerText();
         expect(newPostTitle).toBe(title);
     }
-    async copyAnnouce(title: string, text: string){
+    async copyAnnouce(title: string, text: string) {
         await this.actionIcon.click();
         await this.optionCopy.click();
         await this.titlebox.fill(title);
@@ -48,7 +52,7 @@ export default class AnnoucePage {
         await this.iFrametextbox.contentFrame().locator('body').fill(text);
         await this.saveButton.click();
     }
-    async updateAnnouce(title: string, text: string){
+    async updateAnnouce(title: string, text: string) {
         await this.actionIcon.click();
         await this.optionUpdate.click();
         await this.titlebox.fill(title);
@@ -57,4 +61,19 @@ export default class AnnoucePage {
         await this.iFrametextbox.contentFrame().locator('body').fill(text);
         await this.saveButton.click();
     }
+    async deleteAnnouce() {
+        await this.actionIcon.click();
+        await this.optionDelete.click();
+        await this.confirmYes.click();
+    }
+    async deleteAnnouceMess() {
+        try {
+            const response = await axios.get('https://buianthai.infinityfreeapp.com/adm_program/modules/announcements/announcements_function.php?');
+            expect(response.status).toBe(200);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+
+    }
+
 }

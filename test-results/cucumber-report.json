@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_10:-update-an-announcement",
+        "id": "homepage-functionality;tc_11:-delete-an-announcement",
         "keyword": "Scenario",
-        "line": 66,
-        "name": "TC_10: Update an announcement",
+        "line": 77,
+        "name": "TC_11: Delete an announcement",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 291797748
+              "duration": 266860996
             }
           },
           {
@@ -27,59 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9455903546
+              "duration": 4885009845
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 59,
+            "line": 70,
             "name": "User login with a valid \"Admin\" or \"Admin@123\"",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 1187538984
+              "duration": 7328127049
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 60,
+            "line": 71,
             "name": "User click on Annoucements on left menu",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 791308687
+              "duration": 928265069
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 61,
-            "name": "User updates the first announcement and change title \"title3\" and text \"text3\"",
+            "line": 72,
+            "name": "User deletes the first announcement",
             "match": {
-              "location": "src/test/steps/announceStep.ts:23"
+              "location": "src/test/steps/announceStep.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 7012039849
+              "duration": 1623228728
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 62,
-            "name": "The annoucement has been updated with new title \"title3\"",
+            "line": 73,
+            "name": "The annoucement has been deleted successfully",
             "match": {
-              "location": "src/test/steps/announceStep.ts:27"
+              "location": "src/test/steps/announceStep.ts:36"
             },
             "result": {
               "status": "passed",
-              "duration": 76263973
+              "duration": 810687231
             }
           },
           {
@@ -87,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 70112431
+              "duration": 97015507
             }
           }
         ],

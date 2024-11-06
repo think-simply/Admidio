@@ -7,6 +7,8 @@
     "newAnnounce": "(//div[contains(@class,'card-header')])[1]",
     "actionIcon": "(//i[contains(@class,'fas fa-chevron-circle-down')])[1]",
     "optionCopy": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn'][normalize-space()='Copy']",
-    "optionUpdate": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn'][normalize-space()='Edit']"
+    "optionUpdate": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn'][normalize-space()='Edit']",
+    "optionDelete": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn openPopup'][normalize-space()='Delete']",
+    "confirmYes": "#admButtonYes"
 
 }

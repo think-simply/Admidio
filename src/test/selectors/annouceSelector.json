@@ -1,8 +1,8 @@
 {
     "addEntry": "#menu_item_announcement_add",
-    "title": "#ann_headline",
+    "titlebox": "#ann_headline",
     "category": "#ann_cat_id",
-    "text": "//body[@contenteditable='true']",
+    "iFrametextbox": "iframe[title='Rich Text Editor\\, ann_description']",
     "saveButton": "#btn_save",
-    "newAnnounce": "(//i[@class='fas fa-newspaper'])[1]"
+    "newAnnounce": "(//div[contains(@class,'card-header')])[1]"
 }

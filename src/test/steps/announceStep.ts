@@ -4,9 +4,9 @@ import AnnoucePage from "../pages/announcePage";
 import { pageFixture } from "../../hooks/pageFixture";
 
 
-When("User add a new annoucement title {string}", { timeout: 30000 }, async (title) => {
+When("User add a new annoucement title {string} and text {string}", { timeout: 30000 }, async (title, text) => {
   const annoucePage = new AnnoucePage(pageFixture.page);
-  await annoucePage.addAnnouce(title);
+  await annoucePage.addAnnouce(title, text);
 });
 Then("New annoucement with title {string} has been created successfully", { timeout: 30000 }, async (title) => {
   const annoucePage = new AnnoucePage(pageFixture.page);

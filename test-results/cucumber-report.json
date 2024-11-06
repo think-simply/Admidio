@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 303731303
+              "duration": 266725751
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11009560117
+              "duration": 2807381417
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1439737817
+              "duration": 8968559163
             }
           },
           {
@@ -53,21 +53,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 711218181
+              "duration": 673823214
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 45,
-            "name": "User add a new annoucement title \"title1\"",
+            "name": "User add a new annoucement title \"title1\" and text \"text\"",
             "match": {
               "location": "src/test/steps/announceStep.ts:7"
             },
             "result": {
-              "status": "failed",
-              "duration": 1965846,
-              "error_message": "TypeError: Cannot read properties of null (reading 'locator')\n    at new AnnoucePage (/home/nttheu/Demoprojetcs/Admidio/Admidio/src/test/pages/announcePage.ts:19:27)\n    at World.<anonymous> (/home/nttheu/Demoprojetcs/Admidio/Admidio/src/test/steps/announceStep.ts:8:23)"
+              "status": "passed",
+              "duration": 7366866635
             }
           },
           {
@@ -79,8 +78,8 @@
               "location": "src/test/steps/announceStep.ts:11"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 86117013
             }
           },
           {
@@ -88,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 287159999
+              "duration": 73922934
             }
           }
         ],

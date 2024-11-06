@@ -42,9 +42,9 @@ Feature: Homepage Functionality
   Scenario: TC_08: Add a new announcement
     When User login with a valid "<username>" or "<password>"
     When User click on Annoucements on left menu
-    And User add a new annoucement title "<title>"
+    And User add a new annoucement title "<title>" and text "<text>"
     Then New annoucement with title "<title>" has been created successfully
 
     Examples:
-      | username | password  | title |
-      | Admin    | Admin@123 | title1 |
+      | username | password  | title |text|
+      | Admin    | Admin@123 | title1 |text|

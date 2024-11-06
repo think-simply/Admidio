@@ -11,6 +11,7 @@ export default class AnnoucePage {
     readonly newAnnounce: Locator;
     readonly actionIcon : Locator;
     readonly optionCopy : Locator;
+    readonly optionUpdate : Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -22,6 +23,7 @@ export default class AnnoucePage {
         this.newAnnounce = page.locator(locator.newAnnounce);
         this.actionIcon = page.locator(locator.actionIcon);
         this.optionCopy = page.locator(locator.optionCopy);
+        this.optionUpdate = page.locator(locator.optionUpdate)
     }
     async addAnnouce(title: string, text: string) {
         await this.addEntry.click();
@@ -40,6 +42,15 @@ export default class AnnoucePage {
     async copyAnnouce(title: string, text: string){
         await this.actionIcon.click();
         await this.optionCopy.click();
+        await this.titlebox.fill(title);
+        await this.category.selectOption({ label: 'Important' });
+        await this.iFrametextbox.contentFrame().locator('html').click();
+        await this.iFrametextbox.contentFrame().locator('body').fill(text);
+        await this.saveButton.click();
+    }
+    async updateAnnouce(title: string, text: string){
+        await this.actionIcon.click();
+        await this.optionUpdate.click();
         await this.titlebox.fill(title);
         await this.category.selectOption({ label: 'Important' });
         await this.iFrametextbox.contentFrame().locator('html').click();

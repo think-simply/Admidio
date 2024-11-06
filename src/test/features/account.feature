@@ -37,24 +37,41 @@ Feature: Homepage Functionality
   #   Examples:
   #     | username | password   |
   #     | Admin    | Admin@123 |
-
   # @high
   # Scenario: TC_08: Add a new announcement
   #   When User login with a valid "<username>" or "<password>"
   #   When User click on Annoucements on left menu
   #   And User add a new annoucement title "<title>" and text "<text>"
   #   Then New annoucement with title "<title>" has been created successfully
-
   #   Examples:
   #     | username | password  | title |text|
   #     | Admin    | Admin@123 | title1 |text|
+# Scenario: TC_09: Copy an announcement
+#     When User login with a valid "<username>" or "<password>"
+#     When User click on Annoucements on left menu
+#     And User copy the first announcement and change title "<title>" and text "<text>"
+#     Then New annoucement has been copied successfully with new title "<title>" 
+#     Examples:
+#       | username | password  | title |text|
+#       | Admin    | Admin@123 | title2 |text2|
 
-Scenario: TC_09: Copy an announcement
+  # Scenario: TC_10: Update an announcement
+  #   When User login with a valid "<username>" or "<password>"
+  #   When User click on Annoucements on left menu
+  #   And User updates the first announcement and change title "<title>" and text "<text>"
+  #   Then The annoucement has been updated with new title "<title>"
+
+  #   Examples:
+  #     | username | password  | title  | text  |
+  #     | Admin    | Admin@123 | title3 | text3 |
+
+
+  Scenario: TC_11: Delete an announcement
     When User login with a valid "<username>" or "<password>"
     When User click on Annoucements on left menu
-    And User copy the first announcement title "<title>" and text "<text>"
-    Then New annoucement with title "<title>" has been copied successfully
+    And User deletes the first announcement
+    Then The annoucement has been deleted successfully
 
     Examples:
-      | username | password  | title |text|
-      | Admin    | Admin@123 | title2 |text2|
+      | username | password  | 
+      | Admin    | Admin@123 | 

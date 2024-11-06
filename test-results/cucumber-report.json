@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_09:-copy-an-announcement",
+        "id": "homepage-functionality;tc_10:-update-an-announcement",
         "keyword": "Scenario",
-        "line": 60,
-        "name": "TC_09: Copy an announcement",
+        "line": 66,
+        "name": "TC_10: Update an announcement",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 281389334
+              "duration": 291797748
             }
           },
           {
@@ -27,59 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6431219259
+              "duration": 9455903546
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 53,
+            "line": 59,
             "name": "User login with a valid \"Admin\" or \"Admin@123\"",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 1259901384
+              "duration": 1187538984
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 54,
+            "line": 60,
             "name": "User click on Annoucements on left menu",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 646037598
+              "duration": 791308687
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 55,
-            "name": "User copy the first announcement title \"title2\" and text \"text2\"",
+            "line": 61,
+            "name": "User updates the first announcement and change title \"title3\" and text \"text3\"",
             "match": {
-              "location": "src/test/steps/announceStep.ts:15"
+              "location": "src/test/steps/announceStep.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 4035382683
+              "duration": 7012039849
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 56,
-            "name": "New annoucement with title \"title2\" has been copied successfully",
+            "line": 62,
+            "name": "The annoucement has been updated with new title \"title3\"",
             "match": {
-              "location": "src/test/steps/announceStep.ts:19"
+              "location": "src/test/steps/announceStep.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 78010226
+              "duration": 76263973
             }
           },
           {
@@ -87,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 87922367
+              "duration": 70112431
             }
           }
         ],

@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_11:-delete-an-announcement",
+        "id": "homepage-functionality;tc_12:-add-a-new-category",
         "keyword": "Scenario",
-        "line": 77,
-        "name": "TC_11: Delete an announcement",
+        "line": 87,
+        "name": "TC_12: Add a new category",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 266860996
+              "duration": 414659496
             }
           },
           {
@@ -27,59 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4885009845
+              "duration": 8893736919
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 70,
+            "line": 80,
             "name": "User login with a valid \"Admin\" or \"Admin@123\"",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 7328127049
+              "duration": 1301792973
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 71,
+            "line": 81,
             "name": "User click on Annoucements on left menu",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 928265069
+              "duration": 704881200
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 72,
-            "name": "User deletes the first announcement",
+            "line": 82,
+            "name": "User create new category",
             "match": {
-              "location": "src/test/steps/announceStep.ts:32"
+              "location": "src/test/steps/announceStep.ts:41"
             },
             "result": {
               "status": "passed",
-              "duration": 1623228728
+              "duration": 4955822955
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 73,
-            "name": "The annoucement has been deleted successfully",
+            "line": 83,
+            "name": "The new category has been created successfully",
             "match": {
-              "location": "src/test/steps/announceStep.ts:36"
+              "location": "src/test/steps/announceStep.ts:45"
             },
             "result": {
               "status": "passed",
-              "duration": 810687231
+              "duration": 61670223
             }
           },
           {
@@ -87,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 97015507
+              "duration": 59720438
             }
           }
         ],

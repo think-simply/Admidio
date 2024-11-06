@@ -1,6 +1,8 @@
 import { Page, Locator, expect } from "@playwright/test";
 const locator = require("../selectors/annouceSelector.json");
 const axios = require('axios');
+import { faker } from '@faker-js/faker';
+
 export default class AnnoucePage {
     readonly page: Page;
     readonly addEntry: Locator;
@@ -14,6 +16,10 @@ export default class AnnoucePage {
     readonly optionUpdate: Locator;
     readonly optionDelete: Locator;
     readonly confirmYes: Locator;
+    readonly EditCate: Locator;
+    readonly createCate: Locator;
+    readonly firstName: Locator;
+    readonly categoryList: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -27,7 +33,11 @@ export default class AnnoucePage {
         this.optionCopy = page.locator(locator.optionCopy);
         this.optionUpdate = page.locator(locator.optionUpdate);
         this.optionDelete = page.locator(locator.optionDelete);
-        this.confirmYes = page.locator(locator.confirmYes)
+        this.confirmYes = page.locator(locator.confirmYes);
+        this.EditCate = page.locator(locator.EditCate);
+        this.createCate = page.locator(locator.createCate);
+        this.firstName = page.locator(locator.firstName);
+        this.categoryList = page.locator(locator.categoryList);
     }
     async addAnnouce(title: string, text: string) {
         await this.addEntry.click();
@@ -75,5 +85,33 @@ export default class AnnoucePage {
         }
 
     }
+    async createCategory() {
+        await this.EditCate.click();
+        await this.createCate.click();
+        // get random number
+        const getUniqueNumber = () => {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = (now.getMonth() + 1)
+            const day = now.getDate()
+            const hours = now.getHours()
+            const minutes = now.getMinutes()
+            const seconds = now.getSeconds()
 
+            const uniqueNumber = Number(`${year}${month}${day}${hours}${minutes}${seconds}`)
+
+            return uniqueNumber;
+        }
+
+        const id = getUniqueNumber();
+
+        const name = `group3_${id}`;
+
+        await this.firstName.fill(name);
+        await this.saveButton.click();
+    }
+    async createCategorylist() {
+        await expect(this.categoryList).toBeVisible();
+
+    }
 }

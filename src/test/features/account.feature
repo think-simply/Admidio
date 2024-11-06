@@ -66,11 +66,21 @@ Feature: Homepage Functionality
   #     | Admin    | Admin@123 | title3 | text3 |
 
 
-  Scenario: TC_11: Delete an announcement
+  # Scenario: TC_11: Delete an announcement
+  #   When User login with a valid "<username>" or "<password>"
+  #   When User click on Annoucements on left menu
+  #   And User deletes the first announcement
+  #   Then The annoucement has been deleted successfully
+
+  #   Examples:
+  #     | username | password  | 
+  #     | Admin    | Admin@123 | 
+
+  Scenario: TC_12: Add a new category
     When User login with a valid "<username>" or "<password>"
     When User click on Annoucements on left menu
-    And User deletes the first announcement
-    Then The annoucement has been deleted successfully
+    And User create new category
+    Then The new category has been created successfully
 
     Examples:
       | username | password  | 

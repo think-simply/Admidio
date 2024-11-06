@@ -37,3 +37,12 @@ Then("The annoucement has been deleted successfully", { timeout: 30000 }, async 
   const annoucePage = new AnnoucePage(pageFixture.page);
   await annoucePage.deleteAnnouceMess();
 });
+
+When("User create new category", { timeout: 30000 }, async () => {
+  const annoucePage = new AnnoucePage(pageFixture.page);
+  await annoucePage.createCategory();
+});
+Then("The new category has been created successfully", { timeout: 30000 }, async () => {
+  const annoucePage = new AnnoucePage(pageFixture.page);
+  await annoucePage.createCategorylist();
+});

@@ -9,6 +9,12 @@
     "optionCopy": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn'][normalize-space()='Copy']",
     "optionUpdate": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn'][normalize-space()='Edit']",
     "optionDelete": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn openPopup'][normalize-space()='Delete']",
-    "confirmYes": "#admButtonYes"
+    "confirmYes": "#admButtonYes",
+
+    "EditCate": "#menu_item_announcement_categories",
+    "createCate": "#menu_item_categories_add",
+    "firstName": "#cat_name",
+    "categoryList": "//th[normalize-space()='Title']"
+
 
 }

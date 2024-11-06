@@ -4,5 +4,8 @@
     "category": "#ann_cat_id",
     "iFrametextbox": "iframe[title='Rich Text Editor\\, ann_description']",
     "saveButton": "#btn_save",
-    "newAnnounce": "(//div[contains(@class,'card-header')])[1]"
+    "newAnnounce": "(//div[contains(@class,'card-header')])[1]",
+    "actionIcon": "(//i[contains(@class,'fas fa-chevron-circle-down')])[1]",
+    "optionCopy": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn'][normalize-space()='Copy']"
+
 }

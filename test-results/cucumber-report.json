@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_08:-add-a-new-announcement",
+        "id": "homepage-functionality;tc_09:-copy-an-announcement",
         "keyword": "Scenario",
-        "line": 50,
-        "name": "TC_08: Add a new announcement",
+        "line": 60,
+        "name": "TC_09: Copy an announcement",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 266725751
+              "duration": 281389334
             }
           },
           {
@@ -27,59 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2807381417
+              "duration": 6431219259
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 43,
+            "line": 53,
             "name": "User login with a valid \"Admin\" or \"Admin@123\"",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 8968559163
+              "duration": 1259901384
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 44,
+            "line": 54,
             "name": "User click on Annoucements on left menu",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 673823214
+              "duration": 646037598
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 45,
-            "name": "User add a new annoucement title \"title1\" and text \"text\"",
+            "line": 55,
+            "name": "User copy the first announcement title \"title2\" and text \"text2\"",
             "match": {
-              "location": "src/test/steps/announceStep.ts:7"
+              "location": "src/test/steps/announceStep.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 7366866635
+              "duration": 4035382683
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 46,
-            "name": "New annoucement with title \"title1\" has been created successfully",
+            "line": 56,
+            "name": "New annoucement with title \"title2\" has been copied successfully",
             "match": {
-              "location": "src/test/steps/announceStep.ts:11"
+              "location": "src/test/steps/announceStep.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 86117013
+              "duration": 78010226
             }
           },
           {
@@ -87,16 +87,11 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 73922934
+              "duration": 87922367
             }
           }
         ],
-        "tags": [
-          {
-            "name": "@high",
-            "line": 41
-          }
-        ],
+        "tags": [],
         "type": "scenario"
       }
     ],

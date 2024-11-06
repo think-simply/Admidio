@@ -9,6 +9,8 @@ export default class AnnoucePage {
     readonly iFrametextbox: Locator;
     readonly saveButton: Locator;
     readonly newAnnounce: Locator;
+    readonly actionIcon : Locator;
+    readonly optionCopy : Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -18,6 +20,8 @@ export default class AnnoucePage {
         this.iFrametextbox = page.locator(locator.iFrametextbox);
         this.saveButton = page.locator(locator.saveButton);
         this.newAnnounce = page.locator(locator.newAnnounce);
+        this.actionIcon = page.locator(locator.actionIcon);
+        this.optionCopy = page.locator(locator.optionCopy);
     }
     async addAnnouce(title: string, text: string) {
         await this.addEntry.click();
@@ -32,6 +36,14 @@ export default class AnnoucePage {
     async newAnnouce(title: string) {
         const newPostTitle = await this.newAnnounce.innerText();
         expect(newPostTitle).toBe(title);
-
+    }
+    async copyAnnouce(title: string, text: string){
+        await this.actionIcon.click();
+        await this.optionCopy.click();
+        await this.titlebox.fill(title);
+        await this.category.selectOption({ label: 'Important' });
+        await this.iFrametextbox.contentFrame().locator('html').click();
+        await this.iFrametextbox.contentFrame().locator('body').fill(text);
+        await this.saveButton.click();
     }
 }

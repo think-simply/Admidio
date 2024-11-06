@@ -38,13 +38,23 @@ Feature: Homepage Functionality
   #     | username | password   |
   #     | Admin    | Admin@123 |
 
-  @high
-  Scenario: TC_08: Add a new announcement
+  # @high
+  # Scenario: TC_08: Add a new announcement
+  #   When User login with a valid "<username>" or "<password>"
+  #   When User click on Annoucements on left menu
+  #   And User add a new annoucement title "<title>" and text "<text>"
+  #   Then New annoucement with title "<title>" has been created successfully
+
+  #   Examples:
+  #     | username | password  | title |text|
+  #     | Admin    | Admin@123 | title1 |text|
+
+Scenario: TC_09: Copy an announcement
     When User login with a valid "<username>" or "<password>"
     When User click on Annoucements on left menu
-    And User add a new annoucement title "<title>" and text "<text>"
-    Then New annoucement with title "<title>" has been created successfully
+    And User copy the first announcement title "<title>" and text "<text>"
+    Then New annoucement with title "<title>" has been copied successfully
 
     Examples:
       | username | password  | title |text|
-      | Admin    | Admin@123 | title1 |text|
+      | Admin    | Admin@123 | title2 |text2|

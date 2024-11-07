@@ -121,4 +121,14 @@ export default class GroupAndRolePage {
             console.error('Error:', error);
         }
     }
+    async addConfig() {
+        await this.category.selectOption({ label: 'Important' });
+ 
+    }
+    async afterAddConfig() {
+        await this.category.selectOption({ label: 'Important' });
+ 
+    }
+
+    
 }

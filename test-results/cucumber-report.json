@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_16:-copy-a-new-event",
+        "id": "homepage-functionality;tc_22:-edit-a-calendar",
         "keyword": "Scenario",
-        "line": 147,
-        "name": "TC_16: Copy a new event",
+        "line": 202,
+        "name": "TC_22: Edit a calendar",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 258783100
+              "duration": 250979489
             }
           },
           {
@@ -27,59 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5962981169
+              "duration": 11407311902
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 140,
+            "line": 195,
             "name": "User login with a valid \"Admin\" or \"Admin@123\"",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 1665648512
+              "duration": 1221615470
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 141,
+            "line": 196,
             "name": "User clicks on Events on left menu",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:36"
             },
             "result": {
               "status": "passed",
-              "duration": 711781986
+              "duration": 725349302
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 142,
-            "name": "User makes a copy of a new event",
+            "line": 197,
+            "name": "User removes a new calendar",
             "match": {
-              "location": "src/test/steps/eventStep.ts:16"
+              "location": "src/test/steps/eventStep.ts:56"
             },
             "result": {
               "status": "passed",
-              "duration": 4834945043
+              "duration": 1537310852
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 143,
-            "name": "The new event has been created successfully",
+            "line": 198,
+            "name": "The calendar has been deleted successfully",
             "match": {
-              "location": "src/test/steps/eventStep.ts:11"
+              "location": "src/test/steps/eventStep.ts:60"
             },
             "result": {
               "status": "passed",
-              "duration": 72124371
+              "duration": 3421633202
             }
           },
           {
@@ -87,18 +87,18 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 104902852
+              "duration": 63261708
             }
           }
         ],
         "tags": [
           {
             "name": "@high",
-            "line": 138
+            "line": 193
           },
           {
             "name": "@now",
-            "line": 138
+            "line": 193
           }
         ],
         "type": "scenario"

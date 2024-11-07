@@ -21,7 +21,7 @@ When("User enters an invalid {string} or {string}", { timeout: 20000 }, async (u
   await dashboardPage.login(username, password);
 });
 
-When("User login with a valid {string} or {string}", { timeout: 20000 }, async (username, password) => {
+When("User login with a valid credential: {string},{string}", { timeout: 20000 }, async (username, password) => {
   const dashboardPage = new DashboardPage(pageFixture.page);
   await dashboardPage.login(username, password);
 });

@@ -4,12 +4,20 @@ import MessagePage from "../pages/messagePage";
 import { pageFixture } from "../../hooks/pageFixture";
 
 
-When("User create a new event", { timeout: 30000 }, async () => {
+When("User send a private message", { timeout: 30000 }, async () => {
   const messagePage = new MessagePage(pageFixture.page);
-  await messagePage.addEvent();
+  await messagePage.sendPrivateMess();
 });
-Then("The new event has been created successfully", { timeout: 30000 }, async () => {
+Then("Message has been sent successfully", { timeout: 30000 }, async () => {
   const messagePage = new MessagePage(pageFixture.page);
-  await messagePage.afterAddEvent();
+  await messagePage.aftersendPrivateMess();
 });
-
+When("User removes a private message", { timeout: 30000 }, async () => {
+  const messagePage = new MessagePage(pageFixture.page);
+  await messagePage.deleteMesssage();
+});
+Then("Message has been deleted successfully", { timeout: 30000 }, async () => {
+  const messagePage = new MessagePage(pageFixture.page);
+  await messagePage.afterDeleteMessage();
+});
+ 

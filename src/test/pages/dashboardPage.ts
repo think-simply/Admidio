@@ -13,6 +13,7 @@ export default class DashboardPage {
     readonly loginSuccess: Locator;
     readonly announceMenu: Locator;
     readonly eventMenu: Locator;
+    readonly messageMenu : Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -23,7 +24,8 @@ export default class DashboardPage {
         this.ForgotPassLink = page.locator(locator.ForgotPassLink);
         this.loginSuccess = page.locator(locator.loginSuccess);
         this.announceMenu = page.locator(locator.announceMenu);
-        this.eventMenu = page.locator(locator.eventMenu)
+        this.eventMenu = page.locator(locator.eventMenu);
+        this.messageMenu = page.locator(locator.messageMenu)
 
     }
     async visit() {
@@ -49,6 +51,9 @@ export default class DashboardPage {
     }
     async clickonEvent() {
         await this.eventMenu.click();
+    }
+    async clickonMessages() {
+        await this.messageMenu.click();
     }
     
 

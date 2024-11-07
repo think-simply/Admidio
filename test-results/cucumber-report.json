@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_22:-edit-a-calendar",
+        "id": "homepage-functionality;tc_26-:-write-a-private-message",
         "keyword": "Scenario",
-        "line": 202,
-        "name": "TC_22: Edit a calendar",
+        "line": 14,
+        "name": "TC_26 : Write a private message",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 250979489
+              "duration": 239488517
             }
           },
           {
@@ -27,59 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11407311902
+              "duration": 8402749802
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 195,
-            "name": "User login with a valid \"Admin\" or \"Admin@123\"",
+            "line": 15,
+            "name": "User login with a valid credential: \"Admin\",\"Admin@123\"",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 1221615470
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 196,
-            "name": "User clicks on Events on left menu",
-            "match": {
-              "location": "src/test/steps/dashboardSteps.ts:36"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 725349302
+              "duration": 1416229235
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 197,
-            "name": "User removes a new calendar",
+            "line": 16,
+            "name": "User clicks on Messages on left menu",
             "match": {
-              "location": "src/test/steps/eventStep.ts:56"
+              "location": "src/test/steps/dashboardSteps.ts:40"
             },
             "result": {
               "status": "passed",
-              "duration": 1537310852
+              "duration": 939977433
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "User removes a private message",
+            "match": {
+              "location": "src/test/steps/messageStep.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3311554019
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 198,
-            "name": "The calendar has been deleted successfully",
+            "line": 18,
+            "name": "Message has been deleted successfully",
             "match": {
-              "location": "src/test/steps/eventStep.ts:60"
+              "location": "src/test/steps/messageStep.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 3421633202
+              "duration": 1212556380
             }
           },
           {
@@ -87,18 +87,18 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 63261708
+              "duration": 91478415
             }
           }
         ],
         "tags": [
           {
             "name": "@high",
-            "line": 193
+            "line": 13
           },
           {
             "name": "@now",
-            "line": 193
+            "line": 13
           }
         ],
         "type": "scenario"
@@ -109,6 +109,6 @@
     "keyword": "Feature",
     "name": "Homepage Functionality",
     "tags": [],
-    "uri": "src/test/features/account.feature"
+    "uri": "src/test/features/message.feature"
   }
 ]

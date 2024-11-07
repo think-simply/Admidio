@@ -37,4 +37,8 @@ When("User clicks on Events on left menu", { timeout: 20000 }, async () => {
   const dashboardPage = new DashboardPage(pageFixture.page);
   await dashboardPage.clickonEvent();
 });
+When("User clicks on Messages on left menu", { timeout: 20000 }, async () => {
+  const dashboardPage = new DashboardPage(pageFixture.page);
+  await dashboardPage.clickonMessages();
+});
 

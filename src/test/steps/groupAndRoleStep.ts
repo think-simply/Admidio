@@ -29,5 +29,29 @@ Then("The role has been deleted successfully", { timeout: 30000 }, async () => {
   await groupAndRolePage.afterRemoveRole();
 });
 
+When("User add a category", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.page);
+  await groupAndRolePage.addCategory();
+});
+Then("The new role-category has been created successfully", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.page);
+  await groupAndRolePage.afterAddCate();
+});
 
+When("User updates a category", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.page);
+  await groupAndRolePage.updateCategory();
+});
+Then("The role-category has been updated successfully", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.page);
+  await groupAndRolePage.afterUpdateCate();
+});
+When("User removes a category", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.page);
+  await groupAndRolePage.updateCategory();
+});
+Then("The role-category has been removed successfully", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.page);
+  await groupAndRolePage.afterUpdateCate();
+});
 

@@ -7,7 +7,14 @@
     "titleRole": "(//h5[@class='card-title'])[1]",
     "description": "#rol_description",
     "confirmYes": "#admButtonYes",
-    "deleteIcon": "(//i[@data-original-title='Delete role'])[1]"
+    "deleteIcon": "(//i[@data-original-title='Delete role'])[1]",
 
-
+    "editCategory": "#menu_item_groups_roles_maintain_categories",
+    "createCategory": "#menu_item_categories_add",
+    "nameCate": "#cat_name",
+    "editIconCate":"(//i[contains(@data-original-title,'Edit')])[1]",
+    "deleteIconCate":"(//i[contains(@data-original-title,'Delete')])[6]",
+    "newCate": "(//tr[last()]//td[@style='text-align: left;'])[1]",
+    "firstTitle": "(//tr//td[@style='text-align: left;'])[1]"
+    
 }

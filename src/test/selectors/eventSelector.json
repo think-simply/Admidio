@@ -1,0 +1,8 @@
+{
+    "createEvent": "#menu_item_event_add",
+    "title": "#dat_headline",
+    "saveButton": "#btn_save",
+    "lastElement": "(//div[@class='card-header'])[last()]"
+    
+
+}

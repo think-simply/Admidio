@@ -5,6 +5,7 @@
     "RegistrationLink": "//li[@class='nav-item']/child::a[text() = 'Registration']",
     "ForgotPassLink": "//a[@class='btn admidio-icon-link' and contains(text(), 'Password forgotten?')]",
     "loginSuccess": "//h3[text()='Logged in as']",
-    "announceMenu": "#announcements"
+    "announceMenu": "#announcements",
+    "eventMenu":"#events"
 
 }

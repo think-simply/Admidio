@@ -123,3 +123,13 @@ Feature: Homepage Functionality
     Examples:
       | username | password  |
       | Admin    | Admin@123 |
+ @high @now
+  Scenario: TC_15: Create a new event
+    When User login with a valid "<username>" or "<password>"
+    When User click on Events on left menu
+    And User create a new event
+    Then The new event has been created successfully
+
+    Examples:
+      | username | password  |
+      | Admin    | Admin@123 |

@@ -1,0 +1,13 @@
+{
+    "createRole": "#menu_item_groups_roles_add",
+    "name": "#rol_name",
+    "saveButton": "#btn_save",
+    "categoryGRpage": "//h1[@class='admidio-module-headline']",
+    "editButton": "(//i[@class='fas fa-edit'])[1]",
+    "titleRole": "(//h5[@class='card-title'])[1]",
+    "description": "#rol_description",
+    "confirmYes": "#admButtonYes",
+    "deleteIcon": "(//i[@data-original-title='Delete role'])[1]"
+
+
+}

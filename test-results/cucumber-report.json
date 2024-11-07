@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_26-:-write-a-private-message",
+        "id": "groups-and-roles-functionality;tc_29-:-delete-a-role",
         "keyword": "Scenario",
-        "line": 14,
-        "name": "TC_26 : Write a private message",
+        "line": 21,
+        "name": "TC_29 : Delete a role",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 239488517
+              "duration": 283552606
             }
           },
           {
@@ -27,59 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8402749802
+              "duration": 17202336800
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 15,
+            "line": 22,
             "name": "User login with a valid credential: \"Admin\",\"Admin@123\"",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 1416229235
+              "duration": 1449509991
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 16,
-            "name": "User clicks on Messages on left menu",
+            "line": 23,
+            "name": "User clicks on Groups and Roles on left menu",
             "match": {
-              "location": "src/test/steps/dashboardSteps.ts:40"
+              "location": "src/test/steps/dashboardSteps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 939977433
+              "duration": 1200235116
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 17,
-            "name": "User removes a private message",
+            "line": 24,
+            "name": "User removes a role",
             "match": {
-              "location": "src/test/steps/messageStep.ts:15"
+              "location": "src/test/steps/groupAndRoleStep.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 3311554019
+              "duration": 1044712721
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 18,
-            "name": "Message has been deleted successfully",
+            "line": 25,
+            "name": "The role has been deleted successfully",
             "match": {
-              "location": "src/test/steps/messageStep.ts:19"
+              "location": "src/test/steps/groupAndRoleStep.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 1212556380
+              "duration": 1116296816
             }
           },
           {
@@ -87,28 +87,28 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 91478415
+              "duration": 79461082
             }
           }
         ],
         "tags": [
           {
             "name": "@high",
-            "line": 13
+            "line": 20
           },
           {
             "name": "@now",
-            "line": 13
+            "line": 20
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "homepage-functionality",
+    "id": "groups-and-roles-functionality",
     "line": 1,
     "keyword": "Feature",
-    "name": "Homepage Functionality",
+    "name": "Groups and Roles Functionality",
     "tags": [],
-    "uri": "src/test/features/message.feature"
+    "uri": "src/test/features/group&role.feature"
   }
 ]

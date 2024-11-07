@@ -7,6 +7,7 @@
     "loginSuccess": "//h3[text()='Logged in as']",
     "announceMenu": "#announcements",
     "eventMenu":"#events",
-    "messageMenu": "#messages"
+    "messageMenu": "#messages",
+    "groupAndRole": "#groups-roles"
 
 }

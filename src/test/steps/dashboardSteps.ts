@@ -41,4 +41,8 @@ When("User clicks on Messages on left menu", { timeout: 20000 }, async () => {
   const dashboardPage = new DashboardPage(pageFixture.page);
   await dashboardPage.clickonMessages();
 });
+When("User clicks on Groups and Roles on left menu", { timeout: 20000 }, async () => {
+  const dashboardPage = new DashboardPage(pageFixture.page);
+  await dashboardPage.clickonGroupAndRole();
+});
 

@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from "@playwright/test";
-const locator = require("../selectors/annouceSelector.json");
+const locator = require("../selectors/annoucementSelector.json");
 const axios = require('axios');
 import { faker } from '@faker-js/faker';
 import { getUniqueNumber } from "../../helper/utils"

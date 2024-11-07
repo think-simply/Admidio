@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "homepage-functionality;tc_15:-create-a-new-event",
+        "id": "homepage-functionality;tc_16:-copy-a-new-event",
         "keyword": "Scenario",
-        "line": 135,
-        "name": "TC_15: Create a new event",
+        "line": 147,
+        "name": "TC_16: Copy a new event",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 270620364
+              "duration": 258783100
             }
           },
           {
@@ -27,59 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5377892691
+              "duration": 5962981169
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 128,
+            "line": 140,
             "name": "User login with a valid \"Admin\" or \"Admin@123\"",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 1213966311
+              "duration": 1665648512
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 129,
-            "name": "User click on Events on left menu",
+            "line": 141,
+            "name": "User clicks on Events on left menu",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:36"
             },
             "result": {
               "status": "passed",
-              "duration": 670679696
+              "duration": 711781986
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 130,
-            "name": "User create a new event",
+            "line": 142,
+            "name": "User makes a copy of a new event",
             "match": {
-              "location": "src/test/steps/eventStep.ts:7"
+              "location": "src/test/steps/eventStep.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 5491677792
+              "duration": 4834945043
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 131,
+            "line": 143,
             "name": "The new event has been created successfully",
             "match": {
               "location": "src/test/steps/eventStep.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 97669934
+              "duration": 72124371
             }
           },
           {
@@ -87,18 +87,18 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 88414434
+              "duration": 104902852
             }
           }
         ],
         "tags": [
           {
             "name": "@high",
-            "line": 126
+            "line": 138
           },
           {
             "name": "@now",
-            "line": 126
+            "line": 138
           }
         ],
         "type": "scenario"

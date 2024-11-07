@@ -29,11 +29,11 @@ When("User should see the homepage", { timeout: 20000 }, async () => {
   const dashboardPage = new DashboardPage(pageFixture.page);
   await dashboardPage.MessLogin();
 });
-When("User click on Annoucements on left menu", { timeout: 20000 }, async () => {
+When("User clicks on Annoucements on left menu", { timeout: 20000 }, async () => {
   const dashboardPage = new DashboardPage(pageFixture.page);
   await dashboardPage.clickonAnnouce();
 });
-When("User click on Events on left menu", { timeout: 20000 }, async () => {
+When("User clicks on Events on left menu", { timeout: 20000 }, async () => {
   const dashboardPage = new DashboardPage(pageFixture.page);
   await dashboardPage.clickonEvent();
 });

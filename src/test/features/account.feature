@@ -50,7 +50,7 @@ Feature: Homepage Functionality
   @high
   Scenario: TC_08: Add a new announcement
     When User login with a valid "<username>" or "<password>"
-    When User click on Annoucements on left menu
+    When User clicks on Annoucements on left menu
     And User add a new annoucement title "<title>" and text "<text>"
     Then New annoucement with title "<title>" has been created successfully
 
@@ -61,7 +61,7 @@ Feature: Homepage Functionality
   @high
   Scenario: TC_09: Copy an announcement
     When User login with a valid "<username>" or "<password>"
-    When User click on Annoucements on left menu
+    When User clicks on Annoucements on left menu
     And User copy the first announcement and change title "<title>" and text "<text>"
     Then New annoucement has been copied successfully with new title "<title>"
 
@@ -72,7 +72,7 @@ Feature: Homepage Functionality
   @high
   Scenario: TC_10: Update an announcement
     When User login with a valid "<username>" or "<password>"
-    When User click on Annoucements on left menu
+    When User clicks on Annoucements on left menu
     And User updates the first announcement and change title "<title>" and text "<text>"
     Then The annoucement has been updated with new title "<title>"
 
@@ -83,7 +83,7 @@ Feature: Homepage Functionality
   @high
   Scenario: TC_11: Delete an announcement
     When User login with a valid "<username>" or "<password>"
-    When User click on Annoucements on left menu
+    When User clicks on Annoucements on left menu
     And User deletes the first announcement
     Then The annoucement has been deleted successfully
 
@@ -94,7 +94,7 @@ Feature: Homepage Functionality
   @high
   Scenario: TC_12: Add a new category
     When User login with a valid "<username>" or "<password>"
-    When User click on Annoucements on left menu
+    When User clicks on Annoucements on left menu
     And User create new category
     Then The new category has been created successfully
 
@@ -105,7 +105,7 @@ Feature: Homepage Functionality
   @high
   Scenario: TC_13: Edit a new category
     When User login with a valid "<username>" or "<password>"
-    When User click on Annoucements on left menu
+    When User clicks on Annoucements on left menu
     And User edit a category
     Then The category has been updated successfully
 
@@ -116,18 +116,30 @@ Feature: Homepage Functionality
   @high
   Scenario: TC_14: Delete a new category
     When User login with a valid "<username>" or "<password>"
-    When User click on Annoucements on left menu
+    When User clicks on Annoucements on left menu
     And User delete a category
     Then The category has been deleted successfully
 
     Examples:
       | username | password  |
       | Admin    | Admin@123 |
- @high @now
+
+  @high
   Scenario: TC_15: Create a new event
     When User login with a valid "<username>" or "<password>"
-    When User click on Events on left menu
+    When User clicks on Events on left menu
     And User create a new event
+    Then The new event has been created successfully
+
+    Examples:
+      | username | password  |
+      | Admin    | Admin@123 |
+
+  @high @now
+  Scenario: TC_16: Copy a new event
+    When User login with a valid "<username>" or "<password>"
+    When User clicks on Events on left menu
+    And User makes a copy of a new event
     Then The new event has been created successfully
 
     Examples:

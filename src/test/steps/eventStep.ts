@@ -12,3 +12,10 @@ Then("The new event has been created successfully", { timeout: 30000 }, async ()
   const eventPage = new EventPage(pageFixture.page);
   await eventPage.afterAddEvent();
 });
+
+When("User makes a copy of a new event", { timeout: 30000 }, async () => {
+  const eventPage = new EventPage(pageFixture.page);
+  await eventPage.copyEvent();
+});
+
+

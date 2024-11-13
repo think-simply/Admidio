@@ -1,14 +1,22 @@
 {
-    
-"createPrivateMess": "#menu_item_messages_new_pm",
-"toMail": "//input[@placeholder='Select from list']",
-"selectedOption": "//ul[@id='select2-msg_to-results']//li[1]",
-"subject": "#msg_subject",
-"message": "#msg_body",
-"sendButton": "#btn_send",
-"subjectInList": "(//td[contains(@class,'text-left')])[2]",
-"removeIcon": "(//i[contains(@title,'Remove message')])[1]",
-"confirmYes": "#admButtonYes"
-
-
+    "writeEmail": "#menu_item_messages_new_email",
+    "createPrivateMess": "#menu_item_messages_new_pm",
+    "toMail": "//input[@placeholder='Select from list']",
+    "selectedOption": "//ul[@id='select2-msg_to-results']//li[1]",
+    "subject": "#msg_subject",
+    "message": "#msg_body",
+    "sendButton": "#btn_send",
+    "subjectInList": "(//td[contains(@class,'text-left')])[2]",
+    "removeIcon": "(//i[contains(@title,'Remove message')])[1]",
+    "confirmYes": "#admButtonYes",
+    "titlePage": "//h1[@class='admidio-module-headline']",
+    "searchLabel": "//label[normalize-space()='Search:']",
+    "searchBox": "//input[@type='search']",
+    "emailIcon": "//i[@class='fas fa-envelope']",
+    "subjectLabel": "//th[@aria-label='Subject: activate to sort column ascending']",
+    "conversationPartner": "//th[@aria-label='Conversation partner']",
+    "dateIcon": "//th[@aria-label='Date: activate to sort column ascending']",
+    "listingPage": "#adm_message_table_info",
+    "paginationPrevious": "#adm_message_table_previous",
+    "paginationNext": "#adm_message_table_next"
 }

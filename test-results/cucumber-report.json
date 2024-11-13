@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "groups-and-roles-functionality;tc_33-:-delete-a-category",
+        "id": "groups-and-roles-functionality;tc_31-:-add-a-category",
         "keyword": "Scenario",
-        "line": 43,
-        "name": "TC_33 : Delete a category",
+        "line": 25,
+        "name": "TC_31 : Add a category",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 267162342
+              "duration": 504571813
             }
           },
           {
@@ -27,59 +27,46 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2831576283
+              "duration": 7045546156
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 44,
-            "name": "User login with a valid credential: \"Admin\",\"Admin@123\"",
-            "match": {
-              "location": "src/test/steps/dashboardSteps.ts:24"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6884717872
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 45,
+            "line": 26,
             "name": "User clicks on Groups and Roles on left menu",
             "match": {
-              "location": "src/test/steps/dashboardSteps.ts:44"
+              "location": "src/test/steps/dashboardSteps.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 1022813192
+              "duration": 831749113
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 46,
-            "name": "User removes a category",
+            "line": 27,
+            "name": "User add a category",
             "match": {
-              "location": "src/test/steps/groupAndRoleStep.ts:49"
+              "location": "src/test/steps/groupAndRoleStep.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 5949632865
+              "duration": 3216785833
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 47,
-            "name": "The role-category has been removed successfully",
+            "line": 28,
+            "name": "The new role-category has been created successfully",
             "match": {
-              "location": "src/test/steps/groupAndRoleStep.ts:53"
+              "location": "src/test/steps/groupAndRoleStep.ts:36"
             },
             "result": {
               "status": "passed",
-              "duration": 64994977
+              "duration": 139251986
             }
           },
           {
@@ -87,18 +74,18 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 45766749
+              "duration": 126609021
             }
           }
         ],
         "tags": [
           {
             "name": "@high",
-            "line": 42
+            "line": 24
           },
           {
             "name": "@now",
-            "line": 42
+            "line": 24
           }
         ],
         "type": "scenario"

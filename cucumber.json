@@ -28,6 +28,7 @@
       "json:test-results/cucumber-report.json",
       "rerun:@rerun.txt"
     ],
+    "globalSetup": "./global-setup.ts",
     "paralle": 2
   }
 }

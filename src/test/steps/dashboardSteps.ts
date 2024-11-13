@@ -4,6 +4,11 @@ import DashboardPage from "../pages/dashboardPage";
 import { pageFixture } from "../../hooks/pageFixture";
 
 Given("User navigates to page", { timeout: 20000 }, async () => {
+  const dashboardPage = new DashboardPage(pageFixture.adminPage); // Use pageFixture.page here
+  await dashboardPage.visit();
+
+});
+Given("User navigates to page as guest", { timeout: 20000 }, async () => {
   const dashboardPage = new DashboardPage(pageFixture.page); // Use pageFixture.page here
   await dashboardPage.visit();
 
@@ -30,19 +35,19 @@ When("User should see the homepage", { timeout: 20000 }, async () => {
   await dashboardPage.MessLogin();
 });
 When("User clicks on Annoucements on left menu", { timeout: 20000 }, async () => {
-  const dashboardPage = new DashboardPage(pageFixture.page);
+  const dashboardPage = new DashboardPage(pageFixture.adminPage);
   await dashboardPage.clickonAnnouce();
 });
 When("User clicks on Events on left menu", { timeout: 20000 }, async () => {
-  const dashboardPage = new DashboardPage(pageFixture.page);
+  const dashboardPage = new DashboardPage(pageFixture.adminPage);
   await dashboardPage.clickonEvent();
 });
 When("User clicks on Messages on left menu", { timeout: 20000 }, async () => {
-  const dashboardPage = new DashboardPage(pageFixture.page);
+  const dashboardPage = new DashboardPage(pageFixture.adminPage);
   await dashboardPage.clickonMessages();
 });
 When("User clicks on Groups and Roles on left menu", { timeout: 20000 }, async () => {
-  const dashboardPage = new DashboardPage(pageFixture.page);
+  const dashboardPage = new DashboardPage(pageFixture.adminPage);
   await dashboardPage.clickonGroupAndRole();
 });
 

@@ -3,14 +3,14 @@ const locator = require("../selectors/loginSelector.json");
 
 export default class LoginPage {
     readonly page: Page;
-    readonly IncorrectAccount : Locator;
+    readonly incorrectAccount : Locator;
 
     constructor(page: Page) {
         this.page = page;
-        this.IncorrectAccount = page.locator(locator.IncorrectAccount);
+        this.incorrectAccount = page.locator(locator.incorrectAccount);
     }
     async ErrorMessage() {
-        await expect(this.IncorrectAccount).toBeVisible({ timeout: 5000 });
+        await expect(this.incorrectAccount).toBeVisible({ timeout: 5000 });
       }
     
 }

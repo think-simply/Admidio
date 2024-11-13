@@ -1,7 +1,7 @@
 import { Page, Locator, expect } from "@playwright/test";
 const locator = require("../selectors/annoucementSelector.json");
 const axios = require('axios');
-import { faker } from '@faker-js/faker';
+
 import { getUniqueNumber } from "../../helper/utils"
 
 export default class AnnoucePage {
@@ -17,7 +17,7 @@ export default class AnnoucePage {
     readonly optionUpdate: Locator;
     readonly optionDelete: Locator;
     readonly confirmYes: Locator;
-    readonly EditCate: Locator;
+    readonly editCategory: Locator;
     readonly createCate: Locator;
     readonly firstName: Locator;
     readonly categoryList: Locator;
@@ -38,7 +38,7 @@ export default class AnnoucePage {
         this.optionUpdate = page.locator(locator.optionUpdate);
         this.optionDelete = page.locator(locator.optionDelete);
         this.confirmYes = page.locator(locator.confirmYes);
-        this.EditCate = page.locator(locator.EditCate);
+        this.editCategory = page.locator(locator.editCategory);
         this.createCate = page.locator(locator.createCate);
         this.firstName = page.locator(locator.firstName);
         this.categoryList = page.locator(locator.categoryList);
@@ -94,7 +94,7 @@ export default class AnnoucePage {
 
     }
     async createCategory() {
-        await this.EditCate.click();
+        await this.editCategory.click();
         await this.createCate.click();
         const id = getUniqueNumber();
         const name = `group3_${id}`;
@@ -107,7 +107,7 @@ export default class AnnoucePage {
     }
 
     async editCate() {
-        await this.EditCate.click();
+        await this.editCategory.click();
         await this.editCaButton.click();
         const id = getUniqueNumber();
         const name = `group3_${id}`;
@@ -123,7 +123,7 @@ export default class AnnoucePage {
     }
 
     async deleteCate() {
-        await this.EditCate.click();
+        await this.editCategory.click();
         await this.deleteCaButton.click();
         await this.confirmYes.click();
 

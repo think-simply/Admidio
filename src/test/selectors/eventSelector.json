@@ -1,5 +1,7 @@
 {
     "createEvent": "#menu_item_event_add",
+    "dropdownCalendar":"#cat_uuid",
+    "optionDropdown":"(//*[@id='cat_uuid']//child::option)[2]",
     "title": "#dat_headline",
     "saveButton": "#btn_save",
     "firstElement": "(//div[@class='card-header'])[1]",
@@ -9,7 +11,7 @@
     "optionUpdate": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn'][normalize-space()='Edit']",
     "optionDelete": "//div[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item btn openPopup'][normalize-space()='Delete']",
     "confirmYes": "#admButtonYes",
-    "EditCalendar": "#menu_item_event_categories",
+    "editCalendar": "#menu_item_event_categories",
     "createCalendar": "#menu_item_categories_add",
     "name":"#cat_name",
     "editCalendarButton": "(//i[contains(@data-original-title,'Edit')])[1]",

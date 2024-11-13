@@ -11,19 +11,20 @@
     "test:failed": "cucumber-js -p rerun @rerun.txt",
     "prettier": "npx prettier --write .",
     "lint:check": "eslint . --max-warnings=0",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "auth:setup": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" node global-setup.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^11.0.1",
+    "@faker-js/faker": "^9.2.0",
     "@playwright/test": "^1.48.2",
     "@types/node": "^22.8.2",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "@faker-js/faker": "^9.1.0",
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "faker": "^6.6.6",

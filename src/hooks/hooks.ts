@@ -1,10 +1,13 @@
-// hooks.ts
 import { BeforeAll, AfterAll, Before, After, Status } from "@cucumber/cucumber";
-import { Browser, BrowserContext, chromium } from "@playwright/test";
+import { Browser, BrowserContext, Page, chromium } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
+import { authConfig } from '../../auth.config';
 
 let browser: Browser;
-let context: BrowserContext;
+let adminContext: BrowserContext;
+let Context: BrowserContext;
+let adminPage: Page;
+let Page: Page;
 
 BeforeAll(async () => {
   console.log("Launching browser...");
@@ -16,28 +19,38 @@ AfterAll(async () => {
   await browser.close();
 });
 
-Before(async function (this: any) {
-  // Access 'this' for scenario context
-  console.log("Creating new context and page...");
-  context = await browser.newContext();
-  const page = await context.newPage();
-  pageFixture.page = page;
-
-  // Store the page in the Cucumber World for access in steps
-  this.page = page;
+Before(async function (this: any, { pickle }) {  // Sử dụng pickle thay vì tags
+  if (pickle.tags.some(tag => tag.name === '@guest')) {  // Kiểm tra tag @guest
+    // Create context for guest (non-logged in users)
+    Context = await browser.newContext();
+    Page = await Context.newPage();
+    pageFixture.page = Page;
+    this.page = Page;
+    console.log("Creating guest context and page...");
+  } else {  // Mặc định sẽ tạo admin context
+    // Create context with stored credentials for admin
+    adminContext = await browser.newContext({
+      storageState: authConfig.admin.storageState
+    });
+    adminPage = await adminContext.newPage();
+    pageFixture.adminPage = adminPage;
+    this.page = adminPage;
+    console.log("Creating admin context and page...");
+  }
 });
 
 After(async function (this: any, { pickle, result }) {
-  // Access 'this'
   console.log("Closing context and page...");
   if (result?.status === Status.FAILED) {
-    console.log("Taking screenshot...");
     await this.page.screenshot({
-      // Use 'this.page'
       path: `./test-results/screenshots/${pickle.name}.png`,
       type: "png",
     });
   }
-  await this.page.close(); // Use 'this.page'
-  await context.close();
+  
+  if (pickle.tags.some(tag => tag.name === '@guest')) {
+    await Context?.close();
+  } else {
+    await adminContext?.close();
+  }
 });

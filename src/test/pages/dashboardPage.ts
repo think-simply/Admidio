@@ -8,8 +8,8 @@ export default class DashboardPage {
     readonly username: Locator;
     readonly password: Locator;
     readonly signinButton: Locator;
-    readonly RegistrationLink: Locator;
-    readonly ForgotPassLink: Locator;
+    readonly registrationLink: Locator;
+    readonly forgotPassLink: Locator;
     readonly loginSuccess: Locator;
     readonly announceMenu: Locator;
     readonly eventMenu: Locator;
@@ -21,8 +21,8 @@ export default class DashboardPage {
         this.username = page.locator(locator.username);
         this.password = page.locator(locator.password);
         this.signinButton = page.locator(locator.signinButton);
-        this.RegistrationLink = page.locator(locator.RegistrationLink);
-        this.ForgotPassLink = page.locator(locator.ForgotPassLink);
+        this.registrationLink = page.locator(locator.registrationLink);
+        this.forgotPassLink = page.locator(locator.forgotPassLink);
         this.loginSuccess = page.locator(locator.loginSuccess);
         this.announceMenu = page.locator(locator.announceMenu);
         this.eventMenu = page.locator(locator.eventMenu);
@@ -35,10 +35,10 @@ export default class DashboardPage {
 
     }
     async gotoRegister() {
-        await this.RegistrationLink.click();
+        await this.registrationLink.click();
     }
     async gotoForgotPass() {
-        await this.ForgotPassLink.click();
+        await this.forgotPassLink.click();
     }
     async login(username: string, password: string) {
         await this.username.fill(username);

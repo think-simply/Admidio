@@ -45,9 +45,7 @@ export default class GroupAndRolePage {
     }
     async addRole() {
         await this.createRole.click()
-        const id = getUniqueNumber();
-        const role = `role_${id}`;
-        await this.name.fill(role)
+        await this.name.fill("new_role_only")
         await this.saveButton.click()
     }
     async afterAddRole() {
@@ -68,7 +66,7 @@ export default class GroupAndRolePage {
         expect(updatedRole).toBe(`${date} event_${id}`);
     }
     async removeRole() {
-        await this.editCategory.click();
+        await this.deleteIcon.click();        
         await this.confirmYes.click();
     }
     async afterRemoveRole() {
@@ -83,15 +81,14 @@ export default class GroupAndRolePage {
     async addCategory() {
         await this.editCategory.click();
         await this.createCategory.click();
-        const id = getUniqueNumber();
-        const cate = `cate_${id}`;
-        await this.nameCate.fill(cate);
+        await this.nameCate.fill("new_category");
         await this.saveButton.click();
     }
     async afterAddCate() {
-        const id = getUniqueNumber();
-        const newCate = await this.newCate.innerText();
-        expect(newCate).toBe(`cate_${id}`);
+        // const id = getUniqueNumber();
+        // const newCate = await this.newCate.innerText();
+        // expect(newCate).toBe(`cate_${id}`);
+        await this.page.waitForSelector('text=new_category');
     }
     async updateCategory() {
         await this.editCategory.click();
@@ -121,14 +118,14 @@ export default class GroupAndRolePage {
             console.error('Error:', error);
         }
     }
-    async addConfig() {
-        await this.category.selectOption({ label: 'Important' });
+    // async addConfig() {
+    //     await this.category.selectOption({ label: 'Important' });
  
-    }
-    async afterAddConfig() {
-        await this.category.selectOption({ label: 'Important' });
+    // }
+    // async afterAddConfig() {
+    //     await this.category.selectOption({ label: 'Important' });
  
-    }
+    // }
 
     
 }

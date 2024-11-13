@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from "@playwright/test";
-const locator = require("../selectors/registerLocators.json");
+const locator = require("../selectors/registerSelector.json");
 import { getUniqueNumber } from "../../helper/utils";
 import { faker } from '@faker-js/faker';
 
@@ -8,7 +8,7 @@ export default class RegisterPage {
   readonly page: Page;
   readonly username: Locator;
   readonly password: Locator;
-  readonly confirmpassword: Locator;
+  readonly confirmPassword: Locator;
   readonly surname: Locator;
   readonly firstname: Locator;
   readonly email: Locator;
@@ -20,7 +20,7 @@ export default class RegisterPage {
     this.page = page;
     this.username = page.locator(locator.username);
     this.password = page.locator(locator.password);
-    this.confirmpassword = page.locator(locator.confirmpassword);
+    this.confirmPassword = page.locator(locator.confirmPassword);
     this.surname = page.locator(locator.surname);
     this.firstname = page.locator(locator.firstname);
     this.email = page.locator(locator.email);
@@ -38,7 +38,7 @@ export default class RegisterPage {
     // Assuming username field has ID 'username'
     await this.username.fill(username);
     await this.password.fill(password);
-    await this.confirmpassword.fill(password);
+    await this.confirmPassword.fill(password);
     await this.surname.fill(surName);
     await this.firstname.fill(firstName);
     await this.email.fill(email);
@@ -71,7 +71,7 @@ export default class RegisterPage {
 
     await this.username.fill(username);
     await this.password.fill(password);
-    await this.confirmpassword.fill(cpassword);
+    await this.confirmPassword.fill(cpassword);
     await this.surname.fill(surName);
     await this.firstname.fill(firstName);
     await this.email.fill(email);

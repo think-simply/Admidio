@@ -4,7 +4,7 @@ const locator = require("../selectors/forgotpassSelector.json");
 export default class ForgotPassPage {
     readonly page: Page;
     readonly usernameOemail: Locator;
-    readonly SendButton : Locator;
+    readonly sendButton : Locator;
     readonly messForgot : Locator;
     
 
@@ -12,13 +12,13 @@ export default class ForgotPassPage {
     constructor(page: Page) {
         this.page = page;
         this.usernameOemail = page.locator(locator.usernameOemail);
-        this.SendButton = page.locator(locator.SendButton);
+        this.sendButton = page.locator(locator.sendButton);
         this.messForgot = page.locator(locator.messForgot);
     }
 
     async forgotPass(email:string) {
         await this.usernameOemail.fill(email);
-        await this.SendButton.click()
+        await this.sendButton.click()
 
     }
     async forgotPassMess() {

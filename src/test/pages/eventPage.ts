@@ -15,14 +15,16 @@ export default class EventPage {
     readonly optionUpdate: Locator;
     readonly optionDelete: Locator;
     readonly confirmYes: Locator;
-    readonly EditCalendar : Locator;
+    readonly editCalendar : Locator;
     readonly createCalendar : Locator;
     readonly name: Locator;
     readonly editCalendarButton: Locator;
     readonly firstCalendarElement: Locator;
     readonly deleteCalendarButton: Locator;
     readonly calendarList: Locator;
-
+    readonly dropdownCalendar: Locator;
+    readonly optionDropdown: Locator;
+  
     constructor(page: Page) {
         this.page = page;
         this.createEvent = page.locator(locator.createEvent);
@@ -35,13 +37,15 @@ export default class EventPage {
         this.optionUpdate = page.locator(locator.optionUpdate);
         this.optionDelete = page.locator(locator.optionDelete);
         this.confirmYes = page.locator(locator.confirmYes);
-        this.EditCalendar = page.locator(locator.EditCalendar);
+        this.editCalendar = page.locator(locator.editCalendar);
         this.createCalendar = page.locator(locator.createCalendar);
         this.name = page.locator(locator.name);
         this.editCalendarButton = page.locator(locator.editCalendarButton);
         this.firstCalendarElement = page.locator(locator.firstCalendarElement);
         this.deleteCalendarButton = page.locator(locator.deleteCalendarButton);
         this.calendarList = page.locator(locator.calendarList);
+        this.dropdownCalendar = page.locator(locator.dropdownCalendar);
+        this.optionDropdown = page.locator(locator.optionDropdown);
 
     }
     async addEvent() {
@@ -49,7 +53,10 @@ export default class EventPage {
         const id = getUniqueNumber();
         const title = `event_${id}`;
         await this.title.fill(title);
+        await this.dropdownCalendar.click();
+        await this.dropdownCalendar.selectOption({ index: 1 });
         await this.saveButton.click();
+
     }
     async afterAddEvent() {
         const date = getDate();
@@ -96,7 +103,7 @@ export default class EventPage {
     }
 
     async addCalendar() {
-        await this.EditCalendar.click();
+        await this.editCalendar.click();
         await this.createCalendar.click();
         const id = getUniqueNumber();
         const name = `calendar_${id}`;
@@ -107,7 +114,7 @@ export default class EventPage {
         await expect(this.calendarList).toBeVisible();
     }
     async updateCalendar() {
-        await this.EditCalendar.click();
+        await this.editCalendar.click();
         await this.editCalendarButton.click();
         const id = getUniqueNumber();
         const name = `calendar_${id}`;
@@ -123,7 +130,7 @@ export default class EventPage {
 
     }
     async deleteCalendar() {
-        await this.EditCalendar.click();
+        await this.editCalendar.click();
         await this.deleteCalendarButton.click();
         await this.confirmYes.click();
 

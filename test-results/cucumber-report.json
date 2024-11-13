@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "groups-and-roles-functionality;tc_31-:-add-a-category",
+        "id": "groups-and-roles-functionality;tc_35-:-update-a-list-configuration",
         "keyword": "Scenario",
-        "line": 25,
-        "name": "TC_31 : Add a category",
+        "line": 49,
+        "name": "TC_35 : update a list configuration",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 504571813
+              "duration": 253643134
             }
           },
           {
@@ -27,46 +27,47 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7045546156
+              "duration": 17154211363
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 26,
+            "line": 50,
             "name": "User clicks on Groups and Roles on left menu",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 831749113
+              "duration": 748756932
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 27,
-            "name": "User add a category",
+            "line": 51,
+            "name": "User updates a new configuration",
             "match": {
-              "location": "src/test/steps/groupAndRoleStep.ts:32"
+              "location": "src/test/steps/groupAndRoleStep.ts:66"
             },
             "result": {
               "status": "passed",
-              "duration": 3216785833
+              "duration": 4579071757
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 28,
-            "name": "The new role-category has been created successfully",
+            "line": 52,
+            "name": "The configuration has been updated successfully",
             "match": {
-              "location": "src/test/steps/groupAndRoleStep.ts:36"
+              "location": "src/test/steps/groupAndRoleStep.ts:70"
             },
             "result": {
-              "status": "passed",
-              "duration": 139251986
+              "status": "failed",
+              "duration": 114794645,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m\"1234\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n    at Proxy.<anonymous> (/home/nttheu/Demoprojetcs/Admidio/node_modules/playwright/lib/matchers/expect.js:225:37)\n    at GroupAndRolePage.aftterUpdateListConfig (/home/nttheu/Demoprojetcs/Admidio/src/test/pages/groupAndRolePage.ts:152:34)\n    at async World.<anonymous> (/home/nttheu/Demoprojetcs/Admidio/src/test/steps/groupAndRoleStep.ts:72:3)"
             }
           },
           {
@@ -74,18 +75,18 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 126609021
+              "duration": 209471041
             }
           }
         ],
         "tags": [
           {
             "name": "@high",
-            "line": 24
+            "line": 48
           },
           {
             "name": "@now",
-            "line": 24
+            "line": 48
           }
         ],
         "type": "scenario"

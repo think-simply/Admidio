@@ -2,17 +2,17 @@
   "cookies": [
     {
       "name": "__test",
-      "value": "c0db8648a48cc8eecc649772f7902378",
+      "value": "6bdad7b591f7e3ad865666b488bb27d8",
       "domain": "buianthai.infinityfreeapp.com",
       "path": "/",
-      "expires": 1766043509.285237,
+      "expires": 1766052002.135288,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "ADMIDIO_if0_37604167_admidio_adm_SESSION_ID",
-      "value": "3df106782b44053d1c5b7076ceccba8e",
+      "value": "792efef75015859a327719319e04d938",
       "domain": ".buianthai.infinityfreeapp.com",
       "path": "/",
       "expires": -1,

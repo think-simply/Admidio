@@ -21,6 +21,11 @@ export default class GroupAndRolePage {
     readonly deleteIconCate: Locator;
     readonly newCate: Locator;
     readonly firstTitle: Locator;
+    readonly selectConfig: Locator;
+    readonly firstRowCondition: Locator;
+    readonly saveChangeButton: Locator;
+    readonly configList: Locator;
+    readonly getText : Locator;
 
 
     constructor(page: Page) {
@@ -42,6 +47,11 @@ export default class GroupAndRolePage {
         this.deleteIconCate = page.locator(locator.deleteIconCate);
         this.newCate = page.locator(locator.newCate);
         this.firstTitle = page.locator(locator.firstTitle);
+        this.selectConfig = page.locator(locator.selectConfig);
+        this.configList = page.locator(locator.configList);
+        this.saveChangeButton = page.locator(locator.saveChangeButton);
+        this.firstRowCondition = page.locator(locator.firstRowCondition);
+        this.getText = page.locator(locator.getText);
     }
     async addRole() {
         await this.createRole.click()
@@ -66,7 +76,7 @@ export default class GroupAndRolePage {
         expect(updatedRole).toBe(`${date} event_${id}`);
     }
     async removeRole() {
-        await this.deleteIcon.click();        
+        await this.deleteIcon.click();
         await this.confirmYes.click();
     }
     async afterRemoveRole() {
@@ -87,7 +97,7 @@ export default class GroupAndRolePage {
     async afterAddCate() {
         // const id = getUniqueNumber();
         // const newCate = await this.newCate.innerText();
-        // expect(newCate).toBe(`cate_${id}`);
+        // expect(newCate).toBe("new_category");
         await this.page.waitForSelector('text=new_category');
     }
     async updateCategory() {
@@ -108,7 +118,7 @@ export default class GroupAndRolePage {
         await this.editCategory.click();
         await this.deleteIconCate.click();
         await this.confirmYes.click();
- 
+
     }
     async afterRemoveCate() {
         try {
@@ -118,14 +128,28 @@ export default class GroupAndRolePage {
             console.error('Error:', error);
         }
     }
-    // async addConfig() {
-    //     await this.category.selectOption({ label: 'Important' });
- 
-    // }
-    // async afterAddConfig() {
-    //     await this.category.selectOption({ label: 'Important' });
- 
-    // }
+    async addListConfig() {
+        // await this.category.selectOption({ label: 'Important' });
+        await this.selectConfig.selectOption({ index: 0 });
 
-    
+    }
+
+    async afterAddListConfig() {
+        await this.selectConfig.selectOption({ label: 'Important' });
+
+    }
+
+    async updateListConfig() {
+        await this.configList.click();
+        await this.selectConfig.selectOption({ index: 2 });
+        await this.firstRowCondition.fill("1234");
+        await this.saveChangeButton.click();
+    }
+
+    async aftterUpdateListConfig() {
+        const updateListConfig = await this.getText.innerText();
+        expect(updateListConfig).toBe("1234");
+
+
+    }
 }

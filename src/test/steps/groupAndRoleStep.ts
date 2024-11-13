@@ -55,3 +55,21 @@ Then("The role-category has been removed successfully", { timeout: 30000 }, asyn
   await groupAndRolePage.afterUpdateCate();
 });
 
+When("User creates a new configuration", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.adminPage);
+  await groupAndRolePage.addListConfig();
+});
+Then("The new configuration has been created successfully", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.adminPage);
+  await groupAndRolePage.afterAddListConfig();
+});
+When("User updates a new configuration", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.adminPage);
+  await groupAndRolePage.updateListConfig();
+});
+Then("The configuration has been updated successfully", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.adminPage);
+  await groupAndRolePage.aftterUpdateListConfig();
+});
+
+

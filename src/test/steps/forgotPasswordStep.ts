@@ -1,6 +1,6 @@
 // loginSteps.ts
 import { Given, When, Then } from "@cucumber/cucumber";
-import ForgotPassPage from "../pages/forgotPassPage";
+import ForgotPassPage from "../pages/forgotPasswordPage";
 import { pageFixture } from "../../hooks/pageFixture";
 
 

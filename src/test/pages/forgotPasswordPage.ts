@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from "@playwright/test";
-const locator = require("../selectors/forgotpassSelector.json");
+const locator = require("../selectors/forgotPasswordSelector.json");
 
 export default class ForgotPassPage {
     readonly page: Page;

@@ -21,6 +21,7 @@
     "selectConfig": "//select[@id='sel_select_configuration']",
     "saveChangeButton": "#btn_save_changes",
     "firstRowCondition": "#condition1",
-    "getText":"//td[@id='td_condition1']"
+    "getText":"//input[@id='condition1']",
+    "deleteOption":"#btn_delete"
     
 }

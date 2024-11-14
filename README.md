@@ -10,7 +10,10 @@ This is a sample automation framework using Playwright,Cucumber and Typescript.(
 3. Install following packages
    cpm install
 
-4. Run testcase by using following command:
+4. Run testcase by using following command: first CLI to get session ID and the second CLI to run all test
+   npx playwright test   
    npm test
 
 5. View the test report in : index.html
+
+

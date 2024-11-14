@@ -25,7 +25,8 @@ export default class GroupAndRolePage {
     readonly firstRowCondition: Locator;
     readonly saveChangeButton: Locator;
     readonly configList: Locator;
-    readonly getText : Locator;
+    readonly getText: Locator;
+    readonly deleteOption: Locator;
 
 
     constructor(page: Page) {
@@ -52,6 +53,7 @@ export default class GroupAndRolePage {
         this.saveChangeButton = page.locator(locator.saveChangeButton);
         this.firstRowCondition = page.locator(locator.firstRowCondition);
         this.getText = page.locator(locator.getText);
+        this.deleteOption = page.locator(locator.deleteOption);
     }
     async addRole() {
         await this.createRole.click()
@@ -129,14 +131,20 @@ export default class GroupAndRolePage {
         }
     }
     async addListConfig() {
-        // await this.category.selectOption({ label: 'Important' });
-        await this.selectConfig.selectOption({ index: 0 });
-
+        await this.configList.click();
+        await this.firstRowCondition.fill("1234");
+        this.page.once('dialog', dialog => {
+            console.log(`Dialog message: ${dialog.message()}`);
+            dialog.accept("new list config 1");
+            dialog.dismiss().catch(() => { });
+        });
+        await this.saveButton.click();
     }
 
     async afterAddListConfig() {
-        await this.selectConfig.selectOption({ label: 'Important' });
-
+        await this.selectConfig.waitFor({ state: 'visible' });
+        const updateListConfig = await this.selectConfig.innerText();
+        expect(updateListConfig).toContain("new list config 1");
     }
 
     async updateListConfig() {
@@ -147,9 +155,26 @@ export default class GroupAndRolePage {
     }
 
     async aftterUpdateListConfig() {
-        const updateListConfig = await this.getText.innerText();
-        expect(updateListConfig).toBe("1234");
+        //textbox (input) là một thẻ tự đóng (self-closing tag), không có nội dung text bên trong
+        const value = await this.getText.inputValue(); //await element.inputValue(); để get text hiện tại của ô input
+        expect(value).toContain("1234");
+    }
+    async deleteListConfig() {
+        await this.configList.click();
+        await this.selectConfig.selectOption({ label: 'new list config 1' });
+        this.page.once('dialog', dialog => {
+            console.log(`Dialog message: ${dialog.message()}`);
+            dialog.accept().catch(error => {
+                console.error('Error accepting dialog:', error);
+            });
+          });
+        await this.deleteOption.click();
+    }
 
-
+    async aftterDeleteListConfig() {
+        await this.selectConfig.waitFor({ state: 'visible' });
+        const updateListConfig = await this.selectConfig.innerText();
+        expect(updateListConfig).not.toContain("new list config 1");
+      
     }
 }

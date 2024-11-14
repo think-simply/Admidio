@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "groups-and-roles-functionality;tc_35-:-update-a-list-configuration",
+        "id": "groups-and-roles-functionality;tc_36-:-delete-a-list-configuration",
         "keyword": "Scenario",
-        "line": 49,
-        "name": "TC_35 : update a list configuration",
+        "line": 55,
+        "name": "TC_36 : Delete a list configuration",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 253643134
+              "duration": 450922013
             }
           },
           {
@@ -27,47 +27,46 @@
             },
             "result": {
               "status": "passed",
-              "duration": 17154211363
+              "duration": 12924036828
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 50,
+            "line": 56,
             "name": "User clicks on Groups and Roles on left menu",
             "match": {
               "location": "src/test/steps/dashboardSteps.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 748756932
+              "duration": 725675955
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 51,
-            "name": "User updates a new configuration",
+            "line": 57,
+            "name": "User deletes a new configuration",
             "match": {
-              "location": "src/test/steps/groupAndRoleStep.ts:66"
+              "location": "src/test/steps/groupAndRoleStep.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 4579071757
+              "duration": 4382040816
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 52,
-            "name": "The configuration has been updated successfully",
+            "line": 58,
+            "name": "The configuration has been deleted successfully",
             "match": {
-              "location": "src/test/steps/groupAndRoleStep.ts:70"
+              "location": "src/test/steps/groupAndRoleStep.ts:79"
             },
             "result": {
-              "status": "failed",
-              "duration": 114794645,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m\"1234\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n    at Proxy.<anonymous> (/home/nttheu/Demoprojetcs/Admidio/node_modules/playwright/lib/matchers/expect.js:225:37)\n    at GroupAndRolePage.aftterUpdateListConfig (/home/nttheu/Demoprojetcs/Admidio/src/test/pages/groupAndRolePage.ts:152:34)\n    at async World.<anonymous> (/home/nttheu/Demoprojetcs/Admidio/src/test/steps/groupAndRoleStep.ts:72:3)"
+              "status": "passed",
+              "duration": 216220724
             }
           },
           {
@@ -75,18 +74,18 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 209471041
+              "duration": 111285369
             }
           }
         ],
         "tags": [
           {
             "name": "@high",
-            "line": 48
+            "line": 54
           },
           {
             "name": "@now",
-            "line": 48
+            "line": 54
           }
         ],
         "type": "scenario"

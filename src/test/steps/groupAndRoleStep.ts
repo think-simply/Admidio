@@ -72,4 +72,13 @@ Then("The configuration has been updated successfully", { timeout: 30000 }, asyn
   await groupAndRolePage.aftterUpdateListConfig();
 });
 
+When("User deletes a new configuration", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.adminPage);
+  await groupAndRolePage.deleteListConfig();
+});
+Then("The configuration has been deleted successfully", { timeout: 30000 }, async () => {
+  const groupAndRolePage = new GroupAndRolePage(pageFixture.adminPage);
+  await groupAndRolePage.aftterDeleteListConfig();
+});
+
 

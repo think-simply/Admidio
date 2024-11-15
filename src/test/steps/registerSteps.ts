@@ -1,4 +1,3 @@
-// loginSteps.ts
 import { Given, When, Then } from "@cucumber/cucumber";
 import RegisterPage from "../pages/registerPage";
 import DashboardPage from "../pages/dashboardPage"

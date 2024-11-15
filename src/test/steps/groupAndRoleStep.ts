@@ -1,4 +1,3 @@
-// loginSteps.ts
 import { Given, When, Then } from "@cucumber/cucumber";
 import GroupAndRolePage from "../pages/groupAndRolePage";
 import { pageFixture } from "../../hooks/pageFixture";

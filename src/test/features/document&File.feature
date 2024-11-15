@@ -4,8 +4,8 @@ Feature: Document and File Functionality
     Given User navigates to page
 
   @high
-  Scenario: TC_39: Create new contact
-    When User clicks on Contacts on left menu
-    And User creates a new contact
-    Then New role has been created successfully
+  Scenario: FOD_01: Create new folder
+    When User clicks on Documents and Files on left menu
+    And User creates a new Folder
+    Then New folder has been created successfully
 

@@ -1,4 +1,3 @@
-// loginSteps.ts
 import { Given, When, Then } from "@cucumber/cucumber";
 import DashboardPage from "../pages/dashboardPage";
 import { pageFixture } from "../../hooks/pageFixture";
@@ -53,4 +52,8 @@ When("User clicks on Groups and Roles on left menu", { timeout: 20000 }, async (
 When("User clicks on Contacts on left menu", { timeout: 20000 }, async () => {
   const dashboardPage = new DashboardPage(pageFixture.adminPage);
   await dashboardPage.clickonContact();
+});
+When("User clicks on Documents and Files on left menu", { timeout: 20000 }, async () => {
+  const dashboardPage = new DashboardPage(pageFixture.adminPage);
+  await dashboardPage.clickonDocumentAndFile();
 });

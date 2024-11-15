@@ -1,4 +1,3 @@
-// loginSteps.ts
 import { Given, When, Then } from "@cucumber/cucumber";
 import ContactPage from "../pages/contactPage";
 import { pageFixture } from "../../hooks/pageFixture";
@@ -7,10 +6,8 @@ import { pageFixture } from "../../hooks/pageFixture";
 When("User creates a new contact", { timeout: 30000 }, async () => {
   const contactPage = new ContactPage(pageFixture.adminPage);
   await contactPage.addContact();
-  await contactPage.showDialogs();
-  await contactPage.saveAction();
 });
-Then("New role has been created successfully", { timeout: 30000 }, async () => {
+Then("New contact has been created successfully", { timeout: 30000 }, async () => {
   const contactPage = new ContactPage(pageFixture.adminPage);
   await contactPage.afterAddContact();
 });

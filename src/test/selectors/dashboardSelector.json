@@ -9,6 +9,7 @@
     "eventMenu":"#events",
     "messageMenu": "#messages",
     "groupAndRoleMenu": "#groups-roles",
-    "contactMenu": "#contacts"
+    "contactMenu": "#contacts",
+    "documentAndFileMenu": "#documents-files"
 
 }

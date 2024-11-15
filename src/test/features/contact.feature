@@ -7,7 +7,7 @@ Feature: Contact Functionality
   Scenario: TC_39: Create new contact
     When User clicks on Contacts on left menu
     And User creates a new contact
-    Then New role has been created successfully
+    Then New contact has been created successfully
 
   @high
   Scenario: TC_40: Update a contact
@@ -15,7 +15,7 @@ Feature: Contact Functionality
     And User updates a new contact
     Then The contact has been updated successfully
 
-  @high
+  @high 
   Scenario: TC_41: Delete a contact
     When User clicks on Contacts on left menu
     And User removes a new contact
@@ -51,13 +51,13 @@ Feature: Contact Functionality
     And User create a new profile category
     Then The profile field category has been created successfully
 
-  @high @now
+  @high
   Scenario: TC_47: Update a new profile category
     When User clicks on Contacts on left menu
     And User updates a new profile category
     Then The profile field category has been updated successfully
 
-  @high @now
+  @high
   Scenario: TC_48: Delete a profile category
     When User clicks on Contacts on left menu
     And User removes a profile category

@@ -11,6 +11,7 @@ export default class ContactPage {
     readonly surname: Locator;
     readonly surnameDialog: Locator;
     readonly firstnameDialog: Locator;
+    readonly createContactButtonPopup: Locator;
     readonly removeIcon: Locator;
     readonly confirmDelete: Locator;
     readonly updateIcon: Locator;
@@ -36,8 +37,8 @@ export default class ContactPage {
     readonly createCategoryButton: Locator;
     readonly fieldCategoryName: Locator;
     readonly createdFieldCategory: Locator;
-    readonly updateProfileFieldCategoryIcon : Locator;
-    readonly deleteProfileFieldCategoryIcon : Locator;
+    readonly updateProfileFieldCategoryIcon: Locator;
+    readonly deleteProfileFieldCategoryIcon: Locator;
     readonly updatedProfileFieldCatogory: Locator;
 
     constructor(page: Page) {
@@ -77,46 +78,20 @@ export default class ContactPage {
         this.updateProfileFieldCategoryIcon = page.locator(locator.updateProfileFieldCategoryIcon);
         this.deleteProfileFieldCategoryIcon = page.locator(locator.deleteProfileFieldCategoryIcon);
         this.updatedProfileFieldCatogory = page.locator(locator.updatedProfileFieldCatogory);
-
+        this.createContactButtonPopup = page.locator(locator.createContactButtonPopup)
     }
     async addContact() {
         await this.createContact.click()
-    }
-    async saveAction() {
-        await this.page.waitForSelector('#btn_save', { state: 'visible' });
+        await this.surnameDialog.fill('new');
+        await this.firstnameDialog.fill('contact');
+        await this.createContactButtonPopup.click();
         await this.saveButton.click();
         await this.nextButton.click();
     }
+
     async afterAddContact() {
         await expect(this.surname.isVisible());
 
-    }
-    async handleMultipleInputs(inputs: string[]) {
-        let currentInputIndex = 0;
-
-        this.page.on('dialog', async (dialog) => {
-            if (currentInputIndex < inputs.length) {
-                await dialog.accept(inputs[currentInputIndex]);
-                currentInputIndex++;
-            } else {
-                await dialog.dismiss();
-            }
-        });
-    }
-
-    async showDialogs() {
-        await Promise.resolve().then(async () => {
-            const inputs = ['new', 'contact'];
-            await this.handleMultipleInputs(inputs);
-
-            // Trigger your dialogs here
-            await this.page.evaluate(() => {
-                const firstname = prompt('Enter first name:');
-                const lastname = prompt('Enter last name:');
-
-                console.log(`Entered: ${firstname} ${lastname}`);
-            });
-        });
     }
 
     async deleteContact() {
@@ -216,12 +191,12 @@ export default class ContactPage {
         await this.editProfileFieldButton.click();
         await this.profileFieldEditCategory.click();
         await this.deleteProfileFieldCategoryIcon.click();
-   
+
     }
     async afterDeleteProfileFieldCategory() {
         await this.updatedProfileFieldCatogory.isHidden();
 
     }
 
-    
+
 }

@@ -3,9 +3,10 @@
     "username": "#usr_login_name",
     "saveButton": "#btn_save",
     "nextButton": "#btn-next",
+    "createContactButtonPopup":"#btn_add",
     "surnameDialog": "//input[@id='lastname']",
     "firstnameDialog":"//input[@id='firstname']",
-    "surname":"//a[text()='new list config 1']",
+    "surname":"//a[text()='new']",
 
     "removeIcon":"(//i[@title ='Remove contact'])[1]",
     "confirmDelete":"//button[@id='btnDelete']",

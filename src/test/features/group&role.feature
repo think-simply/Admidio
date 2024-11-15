@@ -51,7 +51,7 @@ Feature: Groups and Roles Functionality
     And User updates a new configuration
     Then The configuration has been updated successfully
 
-  @high @now
+  @high
   Scenario: TC_36 : Delete a list configuration
     When User clicks on Groups and Roles on left menu
     And User deletes a new configuration

@@ -40,7 +40,7 @@ Feature: Messages Functionality
     Then The calendar has been updated successfully
 
   @high 
-  Scenario: TC_23: Edit a calendar
+  Scenario: TC_23: Remove a calendar
     When User clicks on Events on left menu
     And User removes a new calendar
     Then The calendar has been deleted successfully

@@ -32,7 +32,7 @@ When("User login with a valid credential: {string},{string}", { timeout: 20000 }
 });
 When("User should see the homepage", { timeout: 20000 }, async () => {
   const dashboardPage = new DashboardPage(pageFixture.page);
-  await dashboardPage.MessLogin();
+  await dashboardPage.messageLogin();
 });
 When("User clicks on Annoucements on left menu", { timeout: 20000 }, async () => {
   const dashboardPage = new DashboardPage(pageFixture.adminPage);

@@ -8,6 +8,7 @@
     "announceMenu": "#announcements",
     "eventMenu":"#events",
     "messageMenu": "#messages",
-    "groupAndRole": "#groups-roles"
+    "groupAndRoleMenu": "#groups-roles",
+    "contactMenu": "#contacts"
 
 }

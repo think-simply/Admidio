@@ -1,6 +1,42 @@
 {
-    "createContact": "#menu_item_contacts_create_contact"
- 
+    "createContact": "#menu_item_contacts_create_contact",
+    "username": "#usr_login_name",
+    "saveButton": "#btn_save",
+    "nextButton": "#btn-next",
+    "surnameDialog": "//input[@id='lastname']",
+    "firstnameDialog":"//input[@id='firstname']",
+    "surname":"//a[text()='new list config 1']",
 
+    "removeIcon":"(//i[@title ='Remove contact'])[1]",
+    "confirmDelete":"//button[@id='btnDelete']",
+    "updateIcon":"//a[text()='new']//ancestor::tr//descendant::i[@title='Edit user']",
+    "firstName":"#usf-2",
+    "updatedFirstName":"//a[text()='user2']",
+
+    "importContactButton":"#menu_item_contacts_import_users",
+    "assignRoleDropdown":"#import_role_id",
+    "assignFieldButton":"#btn_forward",
+    "importButton": "#btn_forward",
+    "verifyMessage":"//p[@class='lead']",
+
+    "editProfileFieldButton":"#menu_item_contacts_profile_fields",
+    "createProfileFieldButton": "#menu_item_new_field",
+    "name":"#usf_name",
+    "category":"#usf_cat_id",
+    "dataType":"#usf_type",
+    "requireInput":"#usf_required_input",
+    "createdfield":"//a[text()='newProfileField']",
+    "updateProfileFile":"//a[text()='newProfileField']//ancestor::tr//descendant::i[@data-original-title='Edit']",
+    "updatedField":"//a[text()='newProfileField']//ancestor::tr//descendant::td[text()='Date']",
+    "deleteProfileFile":"//a[text()='newProfileField']//ancestor::tr//descendant::i[@data-original-title='Delete']",
+    "confirmYes": "#admButtonYes",
+
+    "profileFieldEditCategory":"#menu_item_maintain_category",
+    "createCategoryButton": "#menu_item_categories_add",
+    "fieldCategoryName":"#cat_name",
+    "createdFieldCategory":"//a[text()='newProfileFieldCategory']",
+    "updateProfileFieldCategoryIcon":"//a[text()='newProfileFieldCategory']//ancestor::tr//descendant::i[@data-original-title='Edit']",
+    "updatedProfileFieldCatogory":"//a[text()='newProfileFieldCategory1']",
+    "deleteProfileFieldCategoryIcon":"//a[text()='newProfileFieldCategory1']//ancestor::tr//descendant::i[@data-original-title='Delete']"
 
 }

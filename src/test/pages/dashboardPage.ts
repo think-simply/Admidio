@@ -14,7 +14,8 @@ export default class DashboardPage {
     readonly announceMenu: Locator;
     readonly eventMenu: Locator;
     readonly messageMenu : Locator;
-    readonly groupAndRole : Locator;
+    readonly groupAndRoleMenu : Locator;
+    readonly contactMenu : Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -27,7 +28,8 @@ export default class DashboardPage {
         this.announceMenu = page.locator(locator.announceMenu);
         this.eventMenu = page.locator(locator.eventMenu);
         this.messageMenu = page.locator(locator.messageMenu);
-        this.groupAndRole = page.locator(locator.groupAndRole)
+        this.groupAndRoleMenu = page.locator(locator.groupAndRoleMenu);
+        this.contactMenu = page.locator(locator.contactMenu)
 
     }
     async visit() {
@@ -45,7 +47,7 @@ export default class DashboardPage {
         await this.password.fill(password);
         await this.signinButton.click();
     }
-    async MessLogin() {
+    async messageLogin() {
         await expect(this.loginSuccess).toBeVisible();
     }
     async clickonAnnouce() {
@@ -58,7 +60,10 @@ export default class DashboardPage {
         await this.messageMenu.click();
     }
     async clickonGroupAndRole() {
-        await this.groupAndRole.click();
+        await this.groupAndRoleMenu.click();
+    }
+    async clickonContact() {
+        await this.contactMenu.click();
     }
 
 }

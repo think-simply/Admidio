@@ -1,19 +1,16 @@
-# internal:
-
-This is a sample automation framework using Playwright,Cucumber and Typescript.(Following structure with POM)
+Adimio project is automated by using Playwright,Cucumber framwork and Typescript language.(Following structure with POM)
 
 1. Clone the repository to your local machine:
    git clone 
-2. Open the project folder in Visual Studio Code:
-   cd internal
 
-3. Install following packages
-   cpm install
+2. Install following packages
+   npm install
 
-4. Run testcase by using following command: first CLI to get session ID and the second CLI to run all test
-   npx playwright test   
-   npm test
+3. Run testcase by using following command: first CLI to get session ID and the second CLI to run all test
+   - npx playwright test   
+   - npm test
 
-5. View the test report in : index.html
+4. View the test report in:
+   - index.html
 
 

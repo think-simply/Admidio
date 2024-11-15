@@ -50,4 +50,7 @@ When("User clicks on Groups and Roles on left menu", { timeout: 20000 }, async (
   const dashboardPage = new DashboardPage(pageFixture.adminPage);
   await dashboardPage.clickonGroupAndRole();
 });
-
+When("User clicks on Contacts on left menu", { timeout: 20000 }, async () => {
+  const dashboardPage = new DashboardPage(pageFixture.adminPage);
+  await dashboardPage.clickonContact();
+});

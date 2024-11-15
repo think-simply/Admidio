@@ -1,4 +1,4 @@
-Feature: Messages Functionality
+Feature: Annoucement Functionality
 
   Background:
     Given User navigates to page

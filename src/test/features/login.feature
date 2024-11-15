@@ -1,4 +1,4 @@
-Feature: Homepage Functionality
+Feature: Login and Register Functionality
 
   Background:
     Given User navigates to page as guest

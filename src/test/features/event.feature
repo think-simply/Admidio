@@ -1,4 +1,4 @@
-Feature: Messages Functionality
+Feature: Event Functionality
 
   Background:
     Given User navigates to page

@@ -1,7 +1,7 @@
 import { Page, Locator, expect } from "@playwright/test";
-const locator = require("../selectors/documentAndFileSelector.json");
+const locator = require("../selectors/webLinkSelector.json");
 
-export default class DocumentAndFilePage {
+export default class WebLinkPage {
     readonly page: Page;
     readonly createFolderButton: Locator;
     readonly folderName: Locator;

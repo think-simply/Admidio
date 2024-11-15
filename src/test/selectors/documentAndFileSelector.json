@@ -1,4 +1,7 @@
 {
-    "incorrectAccount": "//p[@class='lead' and contains(text(), 'The given username and/or password is incorrect')]"
+    "createFolderButton": "#menu_item_documents_create_folder",
+    "folderName":"#new_folder",
+    "createFolderB":"#btn_create",
+    "createdFolder":"//a[normalize-space()='new folder']"
 
 }

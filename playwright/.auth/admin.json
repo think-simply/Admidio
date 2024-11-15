@@ -5,14 +5,14 @@
       "value": "920ec6e9f5e1c9f4210142d3716eb788",
       "domain": "buianthai.infinityfreeapp.com",
       "path": "/",
-      "expires": 1766221267.566755,
+      "expires": 1766226949.377544,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "ADMIDIO_if0_37604167_admidio_adm_SESSION_ID",
-      "value": "c53caadfc541adbf8b453a5ec27e83e9",
+      "value": "453ac868c4366116df4a70f9333f2d5d",
       "domain": ".buianthai.infinityfreeapp.com",
       "path": "/",
       "expires": -1,

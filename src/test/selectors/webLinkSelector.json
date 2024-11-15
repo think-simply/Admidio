@@ -1,0 +1,18 @@
+{
+    "webCategory": "#menu_item_links_maintain_categories",
+    "createWebCategoryButton": "#menu_item_categories_add",
+    "nameCategory":"#cat_name",
+    "saveButton":"#btn_save",
+    "createdCategory":"//a[normalize-space()='new category 15']",
+
+    "createWebLink": "#menu_item_links_add",
+    "linkName":"#lnk_name",
+    "linkAddress":"#lnk_url",
+    "categoryDropdown":"#lnk_cat_id",
+    "createdWebLink":"//div[normalize-space()='theu_createwebCategory']",
+    "editWebLink":"#//div[@id='lnk_2e201d50-9f06-4ce0-b561-c5467e35c113']//i[@class='fas fa-edit']"
+
+
+
+
+}

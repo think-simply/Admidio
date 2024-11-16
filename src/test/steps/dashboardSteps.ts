@@ -57,3 +57,7 @@ When("User clicks on Documents and Files on left menu", { timeout: 20000 }, asyn
   const dashboardPage = new DashboardPage(pageFixture.adminPage);
   await dashboardPage.clickonDocumentAndFile();
 });
+When("User clicks on Web links on left menu", { timeout: 20000 }, async () => {
+  const dashboardPage = new DashboardPage(pageFixture.adminPage);
+  await dashboardPage.clickonWebLink();
+});

@@ -17,6 +17,7 @@ export default class DashboardPage {
     readonly groupAndRoleMenu : Locator;
     readonly contactMenu : Locator;
     readonly documentAndFileMenu: Locator;
+    readonly webLinkMenu : Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -31,7 +32,8 @@ export default class DashboardPage {
         this.messageMenu = page.locator(locator.messageMenu);
         this.groupAndRoleMenu = page.locator(locator.groupAndRoleMenu);
         this.contactMenu = page.locator(locator.contactMenu);
-        this.documentAndFileMenu = page.locator(locator.documentAndFileMenu)
+        this.documentAndFileMenu = page.locator(locator.documentAndFileMenu);
+        this.webLinkMenu = page.locator(locator.webLinkMenu);
 
     }
     async visit() {
@@ -69,6 +71,9 @@ export default class DashboardPage {
     }
     async clickonDocumentAndFile() {
         await this.documentAndFileMenu.click();
+    }
+    async clickonWebLink() {
+        await this.webLinkMenu.click();
     }
     
 

@@ -10,6 +10,7 @@
     "messageMenu": "#messages",
     "groupAndRoleMenu": "#groups-roles",
     "contactMenu": "#contacts",
-    "documentAndFileMenu": "#documents-files"
+    "documentAndFileMenu": "#documents-files",
+    "webLinkMenu":"#weblinks"
 
 }

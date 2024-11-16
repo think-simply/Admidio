@@ -3,16 +3,21 @@
     "createWebCategoryButton": "#menu_item_categories_add",
     "nameCategory":"#cat_name",
     "saveButton":"#btn_save",
-    "createdCategory":"//a[normalize-space()='new category 15']",
+    "createdCategory":"//a[normalize-space()='createwebCategory']",
+    "updateCategoryButton": "//a[text()='createwebCategory']//parent::td//parent::tr//descendant::i[@data-original-title='Edit']",
+    "updatedCategory":"//a[normalize-space()='createwebCategory_edited']",
+    "deleteCategoryButton":"//a[text()='createwebCategory_edited']//parent::td//parent::tr//descendant::i[@data-original-title='Delete']",
+
 
     "createWebLink": "#menu_item_links_add",
     "linkName":"#lnk_name",
     "linkAddress":"#lnk_url",
     "categoryDropdown":"#lnk_cat_id",
-    "createdWebLink":"//div[normalize-space()='theu_createwebCategory']",
-    "editWebLink":"#//div[@id='lnk_2e201d50-9f06-4ce0-b561-c5467e35c113']//i[@class='fas fa-edit']"
-
-
+    "createdWebLink":"//div[normalize-space()='createwebCategory']",
+    "editWebLink":"//div[text()='createwebCategory']//parent::div[@class='card admidio-blog']//descendant::i[@data-original-title='Edit']",
+    "updatedWebLink":"//a[normalize-space()='theu_edit']",
+    "deleteWebLinkButton":"//div[text()='createwebCategory']//parent::div[@class='card admidio-blog']//descendant::i[@data-original-title='Delete']",
+    "confirmDelete": "//button[@id='admButtonYes']"
 
 
 }

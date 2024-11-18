@@ -4,8 +4,8 @@ on:
     branches: [ main]
   pull_request:
     branches: [ main]
-    schedule:
-    - cron: '0 10 * * *' # 10 AM UTC (tương ứng 5h chiều Việt Nam - GMT+7)
+  schedule:
+  - cron: '0 * * * *' # 10 AM UTC (tương ứng 5h chiều Việt Nam - GMT+7)
 jobs:
   e2e:
     timeout-minutes: 60
